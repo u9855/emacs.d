@@ -59,6 +59,10 @@
  '(custom-file (or custom-file (make-temp-file "custom" nil ".el")))
  ;; Display
  '(truncate-partial-width-windows t)
+ ;; I18n
+ '(eol-mnemonic-dos "[dos]")
+ '(eol-mnemonic-mac "[mac]")
+ '(eol-mnemonic-unix "[unix]")
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
