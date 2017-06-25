@@ -69,6 +69,7 @@
  ;; Frames
  '(initial-frame-alist
    '((height . 43) (width . 100) (font . "Consolas-11")))
+ '(default-frame-alist initial-frame-alist)
  '(cursor-in-non-selected-windows nil)
  '(indicate-buffer-boundaries '((top . left) (bottom . left)))
  '(menu-bar-mode (display-graphic-p))
