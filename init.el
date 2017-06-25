@@ -80,7 +80,8 @@
  ;; Windows
  '(scroll-conservatively 24)
  '(scroll-step 1)
- '(scroll-preserve-screen-position t))
+ '(scroll-preserve-screen-position t)
+ '(next-screen-context-lines 1))
 
 ;; Keymaps
 ;; -------
