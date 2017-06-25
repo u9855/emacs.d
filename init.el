@@ -67,6 +67,8 @@
  '(eval-expression-print-level nil)
  ;; Minibuffer
  '(echo-keystrokes 0.5)
+ ;; Mode Line
+ '(column-number-mode t)
  ;; Paragraphs
  '(bidi-display-reordering nil)
  '(bidi-paragraph-direction 'left-to-right))
