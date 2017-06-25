@@ -68,6 +68,8 @@
  ;; Frames
  '(menu-bar-mode (display-graphic-p))
  '(tool-bar-mode nil)
+ ;; Help
+ '(text-quoting-style 'straight)
  ;; I18n
  '(eol-mnemonic-dos "[dos]")
  '(eol-mnemonic-mac "[mac]")
