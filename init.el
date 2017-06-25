@@ -79,7 +79,8 @@
  '(bidi-paragraph-direction 'left-to-right)
  ;; Windows
  '(scroll-conservatively 24)
- '(scroll-step 1))
+ '(scroll-step 1)
+ '(scroll-preserve-screen-position t))
 
 ;; Keymaps
 ;; -------
