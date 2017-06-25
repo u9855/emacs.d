@@ -61,7 +61,10 @@
  '(truncate-partial-width-windows t)
  ;; Initialization
  '(inhibit-startup-screen t)
- '(initial-scratch-message nil))
+ '(initial-scratch-message nil)
+ ;; Paragraphs
+ '(bidi-display-reordering nil)
+ '(bidi-paragraph-direction 'left-to-right))
 
 ;; Keymaps
 ;; -------
