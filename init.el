@@ -61,6 +61,7 @@
  '(truncate-partial-width-windows t)
  ;; Frames
  '(menu-bar-mode (display-graphic-p))
+ '(tool-bar-mode nil)
  ;; I18n
  '(eol-mnemonic-dos "[dos]")
  '(eol-mnemonic-mac "[mac]")
