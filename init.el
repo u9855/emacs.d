@@ -69,6 +69,7 @@
  '(echo-keystrokes 0.5)
  ;; Mode Line
  '(column-number-mode t)
+ '(size-indication-mode t)
  ;; Paragraphs
  '(bidi-display-reordering nil)
  '(bidi-paragraph-direction 'left-to-right))
