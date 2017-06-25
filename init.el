@@ -6,6 +6,11 @@
 
 ;;; Code:
 
+;; I18n
+;; ----
+
+(set-language-environment "Japanese")
+
 ;; Keymaps
 ;; -------
 
