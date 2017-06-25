@@ -59,6 +59,8 @@
  '(custom-file (or custom-file (make-temp-file "custom" nil ".el")))
  ;; Display
  '(truncate-partial-width-windows t)
+ ;; Frames
+ '(menu-bar-mode (display-graphic-p))
  ;; I18n
  '(eol-mnemonic-dos "[dos]")
  '(eol-mnemonic-mac "[mac]")
