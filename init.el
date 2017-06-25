@@ -73,6 +73,7 @@
  '(backward-delete-char-untabify-method nil)
  '(kill-do-not-save-duplicates t)
  '(yank-excluded-properties t)
+ '(kill-ring-max 100)
  ;; Lisp
  '(eval-expression-print-length nil)
  '(eval-expression-print-level nil)
