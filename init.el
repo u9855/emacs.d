@@ -57,6 +57,8 @@
 (custom-set-variables
  ;; 設定を一時ファイルに書き出して init.el が書き換えられるのを防ぐ。
  '(custom-file (or custom-file (make-temp-file "custom" nil ".el")))
+ ;; Display
+ '(truncate-partial-width-windows t)
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil))
