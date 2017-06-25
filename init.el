@@ -84,6 +84,9 @@
  ;; Minibuffer
  '(echo-keystrokes 0.5)
  '(history-delete-duplicates t)
+ '(completion-ignore-case t)
+ '(read-buffer-completion-ignore-case t)
+ '(read-file-name-completion-ignore-case t)
  ;; Mode Line
  '(column-number-mode t)
  '(size-indication-mode t)
