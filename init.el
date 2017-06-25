@@ -63,6 +63,7 @@
  '(mark-ring-max 32)
  '(global-mark-ring-max 32)
  '(set-mark-command-repeat-pop t)
+ '(delete-selection-mode t)
  ;; Frames
  '(menu-bar-mode (display-graphic-p))
  '(tool-bar-mode nil)
