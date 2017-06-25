@@ -66,6 +66,7 @@
  '(delete-selection-mode t)
  '(electric-pair-mode t)
  ;; Frames
+ '(cursor-in-non-selected-windows nil)
  '(menu-bar-mode (display-graphic-p))
  '(tool-bar-mode nil)
  ;; Help
