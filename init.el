@@ -70,6 +70,7 @@
  '(cursor-in-non-selected-windows nil)
  '(menu-bar-mode (display-graphic-p))
  '(tool-bar-mode nil)
+ '(scroll-bar-mode nil)
  ;; Help
  '(text-quoting-style 'straight)
  ;; I18n
