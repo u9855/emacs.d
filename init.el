@@ -62,6 +62,8 @@
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ ;; Minibuffer
+ '(echo-keystrokes 0.5)
  ;; Paragraphs
  '(bidi-display-reordering nil)
  '(bidi-paragraph-direction 'left-to-right))
