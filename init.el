@@ -113,6 +113,9 @@
 (dir-locals-set-class-variables
  'shared-library
  '((nil . ((buffer-read-only . t)))))
+
+(dir-locals-set-directory-class
+ (expand-file-name "../lisp" data-directory) 'shared-library)
 
 ;; Keymaps
 ;; -------
