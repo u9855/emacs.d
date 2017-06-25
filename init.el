@@ -81,6 +81,8 @@
  ;; Lisp
  '(eval-expression-print-length nil)
  '(eval-expression-print-level nil)
+ ;; Matching
+ '(query-replace-skip-read-only t)
  ;; Minibuffer
  '(echo-keystrokes 0.5)
  '(history-delete-duplicates t)
