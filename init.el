@@ -83,6 +83,7 @@
  '(eval-expression-print-level nil)
  ;; Minibuffer
  '(echo-keystrokes 0.5)
+ '(history-delete-duplicates t)
  ;; Mode Line
  '(column-number-mode t)
  '(size-indication-mode t)
