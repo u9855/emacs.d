@@ -76,7 +76,10 @@
  '(size-indication-mode t)
  ;; Paragraphs
  '(bidi-display-reordering nil)
- '(bidi-paragraph-direction 'left-to-right))
+ '(bidi-paragraph-direction 'left-to-right)
+ ;; Windows
+ '(scroll-conservatively 24)
+ '(scroll-step 1))
 
 ;; Keymaps
 ;; -------
