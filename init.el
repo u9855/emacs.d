@@ -60,6 +60,7 @@
  ;; Display
  '(truncate-partial-width-windows t)
  ;; Editing
+ '(indent-tabs-mode nil)
  '(mark-ring-max 32)
  '(global-mark-ring-max 32)
  '(set-mark-command-repeat-pop t)
