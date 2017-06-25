@@ -109,6 +109,10 @@
  '(next-screen-context-lines 1)
  '(hscroll-margin 0)
  '(hscroll-step 1))
+
+(dir-locals-set-class-variables
+ 'shared-library
+ '((nil . ((buffer-read-only . t)))))
 
 ;; Keymaps
 ;; -------
