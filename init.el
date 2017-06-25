@@ -4,6 +4,13 @@
 
 ;; The file requires GNU Emacs version 25.1 or later.
 
+;;; Code:
+
+;; Keymaps
+;; -------
+
+(keyboard-translate ?\b ?\d)
+
 ;; Local Variables:
 ;; coding: utf-8-unix
 ;; indent-tabs-mode: nil
