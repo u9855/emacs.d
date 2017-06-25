@@ -62,6 +62,9 @@
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ ;; Lisp
+ '(eval-expression-print-length nil)
+ '(eval-expression-print-level nil)
  ;; Minibuffer
  '(echo-keystrokes 0.5)
  ;; Paragraphs
