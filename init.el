@@ -10,6 +10,10 @@
 ;; ----
 
 (set-language-environment "Japanese")
+
+(prefer-coding-system
+ (if (eq system-type 'windows-nt) 'cp932-dos 'utf-8-unix))
+(set-coding-system-priority 'utf-8 'euc-jp 'iso-2022-jp 'cp932)
 
 ;; Keymaps
 ;; -------
