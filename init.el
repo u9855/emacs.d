@@ -94,6 +94,7 @@
  '(completion-ignore-case t)
  '(read-buffer-completion-ignore-case t)
  '(read-file-name-completion-ignore-case t)
+ '(minibuffer-electric-default-mode t)
  ;; Mode Line
  '(column-number-mode t)
  '(size-indication-mode t)
