@@ -81,7 +81,9 @@
  '(scroll-conservatively 24)
  '(scroll-step 1)
  '(scroll-preserve-screen-position t)
- '(next-screen-context-lines 1))
+ '(next-screen-context-lines 1)
+ '(hscroll-margin 0)
+ '(hscroll-step 1))
 
 ;; Keymaps
 ;; -------
