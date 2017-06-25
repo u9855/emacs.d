@@ -69,6 +69,8 @@
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
+ ;; Killing
+ '(backward-delete-char-untabify-method nil)
  ;; Lisp
  '(eval-expression-print-length nil)
  '(eval-expression-print-level nil)
