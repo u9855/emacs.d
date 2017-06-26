@@ -154,6 +154,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (unless package-archive-contents
   (package-refresh-contents))
+
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 
 ;; Keymaps
 ;; -------
