@@ -140,6 +140,8 @@
  '(package-user-dir
    (expand-file-name (format "~/.local/share/emacs/%s.%s/lisp/elpa"
                              emacs-major-version emacs-minor-version))))
+
+(package-initialize)
 
 ;; Keymaps
 ;; -------
