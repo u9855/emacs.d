@@ -157,6 +157,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
+
+(require 'use-package)
 
 ;; Keymaps
 ;; -------
