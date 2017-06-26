@@ -106,6 +106,8 @@
  ;; Mode Line
  '(column-number-mode t)
  '(size-indication-mode t)
+ ;; Mouse
+ '(mouse-wheel-progressive-speed nil)
  ;; Paragraphs
  '(bidi-display-reordering nil)
  '(bidi-paragraph-direction 'left-to-right)
