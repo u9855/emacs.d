@@ -142,6 +142,9 @@
                              emacs-major-version emacs-minor-version))))
 
 (package-initialize)
+
+(unless package-archive-contents
+  (package-refresh-contents))
 
 ;; Keymaps
 ;; -------
