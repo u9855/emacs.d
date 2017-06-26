@@ -127,6 +127,11 @@
 (dir-locals-set-directory-class
  (expand-file-name "../lisp" data-directory) 'shared-library)
 
+;; Packages
+;; --------
+
+(require 'package)
+
 ;; Keymaps
 ;; -------
 
