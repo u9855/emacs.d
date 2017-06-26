@@ -131,6 +131,10 @@
 ;; --------
 
 (require 'package)
+
+(dolist (archive '(("melpa-stable" . "https://stable.melpa.org/packages/")
+                   ("melpa"        . "https://melpa.org/packages/")))
+  (add-to-list 'package-archives archive))
 
 ;; Keymaps
 ;; -------
