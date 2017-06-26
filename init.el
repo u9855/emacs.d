@@ -123,7 +123,6 @@
 (dir-locals-set-class-variables
  'shared-library
  '((nil . ((buffer-read-only . t)))))
-
 (dir-locals-set-directory-class
  (expand-file-name "../lisp" data-directory) 'shared-library)
 
@@ -131,11 +130,9 @@
 ;; --------
 
 (require 'package)
-
 (dolist (archive '(("melpa-stable" . "https://stable.melpa.org/packages/")
                    ("melpa"        . "https://melpa.org/packages/")))
   (add-to-list 'package-archives archive))
-
 (custom-set-variables
  '(package-user-dir
    (expand-file-name (format "~/.local/share/emacs/%s.%s/lisp/elpa"
@@ -151,10 +148,8 @@ non-nil に設定されているとインストールに失敗するので一時
     (funcall fn pkg-desc)))
 
 (package-initialize)
-
 (unless package-archive-contents
   (package-refresh-contents))
-
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
