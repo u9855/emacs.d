@@ -159,6 +159,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (package-install 'use-package))
 
 (require 'use-package)
+(custom-set-variables '(use-package-always-ensure t))
 
 ;; Keymaps
 ;; -------
