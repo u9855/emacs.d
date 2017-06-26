@@ -135,6 +135,11 @@
 (dolist (archive '(("melpa-stable" . "https://stable.melpa.org/packages/")
                    ("melpa"        . "https://melpa.org/packages/")))
   (add-to-list 'package-archives archive))
+
+(custom-set-variables
+ '(package-user-dir
+   (expand-file-name (format "~/.local/share/emacs/%s.%s/lisp/elpa"
+                             emacs-major-version emacs-minor-version))))
 
 ;; Keymaps
 ;; -------
