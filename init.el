@@ -141,6 +141,15 @@
    (expand-file-name (format "~/.local/share/emacs/%s.%s/lisp/elpa"
                              emacs-major-version emacs-minor-version))))
 
+(define-advice package-install-from-archive
+    (:around (fn pkg-desc) disable-dir-local-variables)
+  "Bind `enable-dir-local-variables' to nil then install a package.
+
+`package-user-dir' に対してローカルディレクトリ変数 `buffer-read-only' の値が
+non-nil に設定されているとインストールに失敗するので一時的に無効にする。"
+  (let ((enable-dir-local-variables nil))
+    (funcall fn pkg-desc)))
+
 (package-initialize)
 
 (unless package-archive-contents
