@@ -108,6 +108,7 @@
  '(size-indication-mode t)
  ;; Mouse
  '(mouse-wheel-progressive-speed nil)
+ '(mouse-wheel-scroll-amount '(3 ((shift) . 1) ((control))))
  ;; Paragraphs
  '(bidi-display-reordering nil)
  '(bidi-paragraph-direction 'left-to-right)
