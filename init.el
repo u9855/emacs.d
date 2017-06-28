@@ -158,7 +158,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package dash
   :config
-  (use-package dash-functional))
+  (use-package dash-functional)
+
+  (dash-enable-font-lock))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
