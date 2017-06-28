@@ -155,6 +155,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (require 'use-package)
 (custom-set-variables '(use-package-always-ensure t))
+
+(use-package cp5022x)
 
 ;; Keymaps
 ;; -------
