@@ -165,7 +165,10 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
-(use-package solarized-theme)
+(use-package solarized-theme
+  :config
+  (custom-set-variables
+   '(solarized-distinct-fringe-background t)))
 
 ;; Keymaps
 ;; -------
