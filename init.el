@@ -170,7 +170,12 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(solarized-distinct-fringe-background t)
    '(solarized-use-less-bold t)
-   '(solarized-use-more-italic t)))
+   '(solarized-use-more-italic t)
+   '(solarized-height-minus-1 1.0)
+   '(solarized-height-plus-1 1.0)
+   '(solarized-height-plus-2 1.0)
+   '(solarized-height-plus-3 1.0)
+   '(solarized-height-plus-4 1.0)))
 
 ;; Keymaps
 ;; -------
