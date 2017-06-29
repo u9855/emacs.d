@@ -177,7 +177,12 @@ non-nil に設定されているとインストールに失敗するので一時
    '(solarized-height-plus-3 1.0)
    '(solarized-height-plus-4 1.0))
 
-  (load-theme 'solarized-light t))
+  (load-theme 'solarized-light t)
+
+  (custom-theme-set-faces
+   'solarized-light
+   '(font-lock-comment-face
+     ((t (:inherit font-lock-comment-delimiter-face))))))
 
 ;; Keymaps
 ;; -------
