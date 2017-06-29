@@ -175,7 +175,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(solarized-height-plus-1 1.0)
    '(solarized-height-plus-2 1.0)
    '(solarized-height-plus-3 1.0)
-   '(solarized-height-plus-4 1.0)))
+   '(solarized-height-plus-4 1.0))
+
+  (load-theme 'solarized-light t))
 
 ;; Keymaps
 ;; -------
