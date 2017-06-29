@@ -168,7 +168,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package solarized-theme
   :config
   (custom-set-variables
-   '(solarized-distinct-fringe-background t)))
+   '(solarized-distinct-fringe-background t)
+   '(solarized-use-less-bold t)))
 
 ;; Keymaps
 ;; -------
