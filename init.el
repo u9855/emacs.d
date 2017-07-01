@@ -186,7 +186,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(font-lock-comment-face
      ((t (:inherit font-lock-comment-delimiter-face))))))
 
-(use-package whitespace)
+(use-package whitespace
+  :config
+  (custom-set-variables
+   '(whitespace-style '(face tabs trailing))))
 
 ;; Commands
 ;; --------
