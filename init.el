@@ -185,6 +185,8 @@ non-nil に設定されているとインストールに失敗するので一時
    'solarized-light
    '(font-lock-comment-face
      ((t (:inherit font-lock-comment-delimiter-face))))))
+
+(use-package whitespace)
 
 ;; Commands
 ;; --------
