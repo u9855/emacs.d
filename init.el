@@ -190,7 +190,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(whitespace-style '(face tabs trailing))
-   '(whitespace-trailing-regexp "\\([ \t\u00A0\u3000]+\\)$")))
+   '(whitespace-trailing-regexp "\\([ \t\u00A0\u3000]+\\)$")
+   '(global-whitespace-mode t)))
 
 ;; Commands
 ;; --------
