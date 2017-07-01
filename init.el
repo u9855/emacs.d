@@ -96,6 +96,7 @@
  '(eval-expression-print-level nil)
  ;; Matching
  '(query-replace-skip-read-only t)
+ '(blink-matching-paren nil)
  '(show-paren-mode t)
  ;; Minibuffer
  '(echo-keystrokes 0.5)
