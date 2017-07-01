@@ -186,6 +186,11 @@ non-nil に設定されているとインストールに失敗するので一時
    '(font-lock-comment-face
      ((t (:inherit font-lock-comment-delimiter-face))))))
 
+;; Commands
+;; --------
+
+(advice-add 'yes-or-no-p :override 'y-or-n-p)
+
 ;; Keymaps
 ;; -------
 
