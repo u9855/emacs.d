@@ -183,8 +183,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (custom-theme-set-faces
    'solarized-light
-   '(font-lock-comment-face
-     ((t (:inherit font-lock-comment-delimiter-face))))))
+   '(font-lock-comment-face ((t (:inherit font-lock-comment-delimiter-face))))
+   '(whitespace-tab ((t (:background "#eee8d5"))))
+   '(whitespace-trailing ((t (:background "#eee8d5"))))))
 
 (use-package whitespace
   :diminish global-whitespace-mode
