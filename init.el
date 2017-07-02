@@ -69,6 +69,7 @@
  ;; Files
  '(make-backup-files nil)
  '(auto-save-default nil)
+ '(auto-save-list-file-prefix nil)
  ;; Frames
  '(initial-frame-alist
    '((height . 43) (width . 100) (font . "Consolas-11")))
