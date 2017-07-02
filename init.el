@@ -242,7 +242,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(ffap-rfs-regexp nil)
    '(ffap-machine-p-known 'accept))
 
-  (add-to-list 'ffap-alist '(lisp-interaction-mode . ffap-el-mode)))
+  (add-to-list 'ffap-alist '(lisp-interaction-mode . ffap-el-mode))
+
+  (ffap-bindings))
 
 (use-package log-edit
   :defer t
