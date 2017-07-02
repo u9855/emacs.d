@@ -167,7 +167,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package auto-save-buffers-enhanced
   :config
   (custom-set-variables
-   '(auto-save-buffers-enhanced-interval 2))
+   '(auto-save-buffers-enhanced-interval 2)
+   '(auto-save-buffers-enhanced-include-regexps nil))
 
   (define-advice auto-save-buffers-enhanced-save-buffers
       (:around (fn) save-silently)
