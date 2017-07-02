@@ -167,7 +167,13 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package auto-save-buffers-enhanced
   :config
   (custom-set-variables
-   '(auto-save-buffers-enhanced-interval 2)))
+   '(auto-save-buffers-enhanced-interval 2))
+
+  (define-advice auto-save-buffers-enhanced-save-buffers
+      (:around (fn) save-silently)
+    "Avoid messages when saving files."
+    (let ((save-silently t))
+      (funcall fn))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
