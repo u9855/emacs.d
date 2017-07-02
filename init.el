@@ -164,7 +164,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (dash-enable-font-lock))
 
-(use-package auto-save-buffers-enhanced)
+(use-package auto-save-buffers-enhanced
+  :config
+  (custom-set-variables
+   '(auto-save-buffers-enhanced-interval 2)))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
