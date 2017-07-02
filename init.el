@@ -214,7 +214,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(dabbrev-upcase-means-case-search t)
    '(dabbrev-ignored-buffer-names
      (-union dabbrev-ignored-buffer-names
-             dabbrev-additional-ignored-buffer-names))))
+             dabbrev-additional-ignored-buffer-names))
+   '(dabbrev-ignored-buffer-regexps
+     (-union dabbrev-ignored-buffer-regexps '("^ ")))))
 
 (use-package log-edit
   :defer t
