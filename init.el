@@ -216,7 +216,23 @@ non-nil に設定されているとインストールに失敗するので一時
      (-union dabbrev-ignored-buffer-names
              dabbrev-additional-ignored-buffer-names))
    '(dabbrev-ignored-buffer-regexps
-     (-union dabbrev-ignored-buffer-regexps '("^ ")))))
+     (-union dabbrev-ignored-buffer-regexps '("^ "))))
+
+  (define-advice dabbrev-expand (:around (fn arg) support-japanese)
+    "Support expanding Japanese abbreviation."
+    (let ((dabbrev-abbrev-char-regexp
+           (unless (bobp)
+             (let ((category (char-category-set (char-before))))
+               (cond ((aref category ?a) "\\sw\\|\\s_") ; ASCII
+                     ((aref category ?A) "\\cA")        ; Multibyte Alnum
+                     ((aref category ?C) "\\cC")        ; Kanji
+                     ((aref category ?K) "\\cK")        ; Katakana
+                     ((aref category ?H) "\\cH")        ; Hiragana
+                     ((aref category ?k) "\\ck")        ; Hankaku Katakana
+                     ((aref category ?r) "\\cr")        ; Japanese Roman
+                     ((aref category ?j) "\\cj")        ; Japanese
+                     (t dabbrev-abbrev-char-regexp))))))
+      (funcall fn arg))))
 
 (use-package log-edit
   :defer t
