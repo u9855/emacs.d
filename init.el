@@ -239,7 +239,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(ffap-ftp-regexp nil)
    '(ffap-url-unwrap-remote nil)
-   '(ffap-rfs-regexp nil)))
+   '(ffap-rfs-regexp nil)
+   '(ffap-machine-p-known 'accept)))
 
 (use-package log-edit
   :defer t
