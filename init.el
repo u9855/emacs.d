@@ -174,7 +174,14 @@ non-nil に設定されているとインストールに失敗するので一時
       (:around (fn) save-silently)
     "Avoid messages when saving files."
     (let ((save-silently t))
-      (funcall fn))))
+      (funcall fn)))
+
+  (defun auto-save-buffers-enhanced-git-repository-p ()
+    "Return non-nil if `buffer-file-name' is under git control."
+    (and (executable-find "git")
+         (with-temp-buffer
+           (zerop (call-process "git" nil '(t nil) nil
+                                "rev-parse" "--is-inside-work-tree"))))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
