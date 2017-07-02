@@ -206,7 +206,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (custom-set-variables
-   '(dabbrev-abbrev-skip-leading-regexp "[!$%&'*<>`]")))
+   '(dabbrev-abbrev-skip-leading-regexp "[!$%&'*<>`]")
+   '(dabbrev-upcase-means-case-search t)))
 
 (use-package log-edit
   :defer t
