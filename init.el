@@ -211,7 +211,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (custom-set-variables
    '(dabbrev-abbrev-skip-leading-regexp "[!$%&'*<>`]")
-   '(dabbrev-upcase-means-case-search t)))
+   '(dabbrev-upcase-means-case-search t)
+   '(dabbrev-ignored-buffer-names
+     (-union dabbrev-ignored-buffer-names
+             dabbrev-additional-ignored-buffer-names))))
 
 (use-package log-edit
   :defer t
