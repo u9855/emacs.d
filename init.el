@@ -240,7 +240,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(ffap-ftp-regexp nil)
    '(ffap-url-unwrap-remote nil)
    '(ffap-rfs-regexp nil)
-   '(ffap-machine-p-known 'accept)))
+   '(ffap-machine-p-known 'accept))
+
+  (add-to-list 'ffap-alist '(lisp-interaction-mode . ffap-el-mode)))
 
 (use-package log-edit
   :defer t
