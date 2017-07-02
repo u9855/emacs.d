@@ -195,7 +195,9 @@ non-nil に設定されているとインストールに失敗するので一時
                      (concat "^" (regexp-quote (file-name-directory
                                                 (buffer-file-name)))))))
 
-  (add-hook 'find-file-hook 'auto-save-buffers-enhanced-add-git-repository))
+  (add-hook 'find-file-hook 'auto-save-buffers-enhanced-add-git-repository)
+
+  (auto-save-buffers-enhanced t))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
