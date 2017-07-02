@@ -168,7 +168,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
 (use-package log-edit
-  :defer t)
+  :defer t
+  :config (custom-set-variables
+           '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
 (use-package solarized-theme
   :config
