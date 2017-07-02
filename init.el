@@ -234,7 +234,10 @@ non-nil に設定されているとインストールに失敗するので一時
                      (t dabbrev-abbrev-char-regexp))))))
       (funcall fn arg))))
 
-(use-package ffap)
+(use-package ffap
+  :config
+  (custom-set-variables
+   '(ffap-ftp-regexp nil)))
 
 (use-package log-edit
   :defer t
