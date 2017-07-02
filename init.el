@@ -66,6 +66,8 @@
  '(set-mark-command-repeat-pop t)
  '(delete-selection-mode t)
  '(electric-pair-mode t)
+ ;; Files
+ '(make-backup-files nil)
  ;; Frames
  '(initial-frame-alist
    '((height . 43) (width . 100) (font . "Consolas-11")))
