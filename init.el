@@ -181,7 +181,15 @@ non-nil に設定されているとインストールに失敗するので一時
     (and (executable-find "git")
          (with-temp-buffer
            (zerop (call-process "git" nil '(t nil) nil
-                                "rev-parse" "--is-inside-work-tree"))))))
+                                "rev-parse" "--is-inside-work-tree")))))
+
+  (defun auto-save-buffers-enhanced-add-git-repository ()
+    "Add a regexp that matches a file under git control to
+`auto-save-buffers-enhanced-include-regexps'."
+    (if (auto-save-buffers-enhanced-git-repository-p)
+        (add-to-list 'auto-save-buffers-enhanced-include-regexps
+                     (concat "^" (regexp-quote (file-name-directory
+                                                (buffer-file-name))))))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
