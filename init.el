@@ -68,6 +68,7 @@
  '(electric-pair-mode t)
  ;; Files
  '(make-backup-files nil)
+ '(auto-save-default nil)
  ;; Frames
  '(initial-frame-alist
    '((height . 43) (width . 100) (font . "Consolas-11")))
