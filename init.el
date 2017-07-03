@@ -236,6 +236,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package easy-repeat
   :config
+  (defvar easy-repeat-additional-commands
+    '(previous-buffer scroll-left scroll-right scroll-other-window-down
+      backward-up-list down-list backward-kill-sentence backward-kill-sexp))
+
   (custom-set-variables
    '(easy-repeat-command-list
      (-difference easy-repeat-command-list
