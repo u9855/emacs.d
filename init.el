@@ -246,7 +246,8 @@ non-nil に設定されているとインストールに失敗するので一時
               easy-repeat-command-list
               '(recenter-top-bottom kill-buffer scroll-up-command
                 scroll-down-command beginning-of-defun end-of-defun))
-             easy-repeat-additional-commands))))
+             easy-repeat-additional-commands))
+   '(easy-repeat-mode t)))
 
 (use-package ffap
   :config
