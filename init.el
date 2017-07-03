@@ -234,7 +234,13 @@ non-nil に設定されているとインストールに失敗するので一時
                      (t dabbrev-abbrev-char-regexp))))))
       (funcall fn arg))))
 
-(use-package easy-repeat)
+(use-package easy-repeat
+  :config
+  (custom-set-variables
+   '(easy-repeat-command-list
+     (-difference easy-repeat-command-list
+                  '(recenter-top-bottom kill-buffer scroll-up-command
+                    scroll-down-command beginning-of-defun end-of-defun)))))
 
 (use-package ffap
   :config
