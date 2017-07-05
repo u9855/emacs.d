@@ -298,6 +298,8 @@ non-nil に設定されているとインストールに失敗するので一時
 ;; --------
 
 (advice-add 'yes-or-no-p :override 'y-or-n-p)
+
+(put 'scroll-left 'disabled nil)
 
 ;; Keymaps
 ;; -------
