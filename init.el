@@ -322,7 +322,9 @@ non-nil に設定されているとインストールに失敗するので一時
            ("M-n" . scroll-up-line)
            ("M-p" . scroll-down-line)
            :map ctl-x-map
-           ("-" . shrink-window))
+           ("-" . shrink-window)
+           :map esc-map
+           ("M-v" . scroll-other-window-down))
 
 ;; Local Variables:
 ;; coding: utf-8-unix
