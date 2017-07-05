@@ -238,7 +238,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (defvar easy-repeat-additional-commands
     '(previous-buffer scroll-left scroll-right scroll-other-window-down
-      backward-up-list down-list backward-kill-sentence backward-kill-sexp))
+      backward-up-list down-list backward-kill-sentence backward-kill-sexp
+      enlarge-window shrink-window enlarge-window-horizontally
+      shrink-window-horizontally))
 
   (custom-set-variables
    '(easy-repeat-command-list
