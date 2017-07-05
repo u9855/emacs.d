@@ -316,6 +316,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (keyboard-translate ?\b ?\d)
 
+(bind-keys :map ctl-x-map ("-" . shrink-window))
+
 ;; Local Variables:
 ;; coding: utf-8-unix
 ;; indent-tabs-mode: nil
