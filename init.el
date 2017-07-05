@@ -307,6 +307,9 @@ non-nil に設定されているとインストールに失敗するので一時
   (let ((syntax (syntax-ppss)))
     (if (nth 3 syntax)
         (goto-char (nth 8 syntax)))))
+
+(--each '(down-list forward-list)
+  (advice-add it :before 'beginning-of-string))
 
 ;; Keymaps
 ;; -------
