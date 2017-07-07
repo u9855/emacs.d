@@ -275,7 +275,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(recentf-save-file (expand-file-name "~/.cache/emacs/recentf"))
    '(recentf-exclude
      (-union (list (regexp-quote (expand-file-name "~/.cache")))
-             recentf-exclude))))
+             recentf-exclude))
+   '(recentf-menu-filter 'recentf-arrange-by-dir)))
 
 (use-package solarized-theme
   :config
