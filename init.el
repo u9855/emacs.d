@@ -277,7 +277,9 @@ non-nil に設定されているとインストールに失敗するので一時
      (-union (list (regexp-quote (expand-file-name "~/.cache")))
              recentf-exclude))
    '(recentf-menu-filter 'recentf-arrange-by-dir)
-   '(recentf-mode t)))
+   '(recentf-mode t))
+
+  (bind-key "f" 'recentf-open-files mode-specific-map))
 
 (use-package solarized-theme
   :config
