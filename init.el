@@ -271,7 +271,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package recentf
   :config
   (custom-set-variables
-   '(recentf-max-saved-items 100)))
+   '(recentf-max-saved-items 100)
+   '(recentf-save-file (expand-file-name "~/.cache/emacs/recentf"))))
 
 (use-package solarized-theme
   :config
