@@ -272,7 +272,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(recentf-max-saved-items 100)
-   '(recentf-save-file (expand-file-name "~/.cache/emacs/recentf"))))
+   '(recentf-save-file (expand-file-name "~/.cache/emacs/recentf"))
+   '(recentf-exclude
+     (-union (list (regexp-quote (expand-file-name "~/.cache")))
+             recentf-exclude))))
 
 (use-package solarized-theme
   :config
