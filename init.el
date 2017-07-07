@@ -268,6 +268,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (custom-set-variables
            '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
+(use-package recentf)
+
 (use-package solarized-theme
   :config
   (custom-set-variables
