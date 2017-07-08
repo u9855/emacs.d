@@ -309,7 +309,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(whitespace-trailing-regexp "\\([ \t\u00A0\u3000]+\\)$")
    '(global-whitespace-mode t)))
 
-(use-package winner)
+(use-package winner
+  :init (custom-set-variables '(winner-dont-bind-my-keys t)))
 
 ;; Commands
 ;; --------
