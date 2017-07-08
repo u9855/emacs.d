@@ -312,7 +312,11 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package winner
   :init (custom-set-variables '(winner-dont-bind-my-keys t))
   :config
-  (custom-set-variables '(winner-mode t)))
+  (custom-set-variables '(winner-mode t))
+
+  (bind-keys :map ctl-x-map
+             ("w"   . winner-undo)
+             ("M-w" . winner-redo)))
 
 ;; Commands
 ;; --------
