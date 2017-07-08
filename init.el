@@ -308,6 +308,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(whitespace-style '(face tabs trailing))
    '(whitespace-trailing-regexp "\\([ \t\u00A0\u3000]+\\)$")
    '(global-whitespace-mode t)))
+
+(use-package winner)
 
 ;; Commands
 ;; --------
