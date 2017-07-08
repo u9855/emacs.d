@@ -310,7 +310,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(global-whitespace-mode t)))
 
 (use-package winner
-  :init (custom-set-variables '(winner-dont-bind-my-keys t)))
+  :init (custom-set-variables '(winner-dont-bind-my-keys t))
+  :config
+  (custom-set-variables '(winner-mode t)))
 
 ;; Commands
 ;; --------
