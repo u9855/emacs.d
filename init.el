@@ -301,7 +301,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(whitespace-tab ((t (:background "#eee8d5"))))
    '(whitespace-trailing ((t (:background "#eee8d5"))))))
 
-(use-package switch-window)
+(use-package switch-window
+  :bind (:map goto-map ("o" . switch-window)))
 
 (use-package whitespace
   :diminish global-whitespace-mode
