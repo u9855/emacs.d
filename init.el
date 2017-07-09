@@ -374,6 +374,13 @@ non-nil に設定されているとインストールに失敗するので一時
     (goto-char (line-end-position))
     (let ((line (buffer-substring (line-beginning-position) (point))))
       (--dotimes arg (insert "\n" line)))))
+
+(defun indent-defun ()
+  "Indent the current defun."
+  (interactive)
+  (save-mark-and-excursion
+   (mark-defun)
+   (indent-region (region-beginning) (region-end))))
 
 ;; Keymaps
 ;; -------
