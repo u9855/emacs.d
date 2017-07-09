@@ -366,6 +366,14 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (--each '(down-list forward-list)
   (advice-add it :before 'beginning-of-string))
+
+(defun duplicate-line (arg)
+  "Duplicate the current line ARG times."
+  (interactive "p")
+  (save-excursion
+    (goto-char (line-end-position))
+    (let ((line (buffer-substring (line-beginning-position) (point))))
+      (--dotimes arg (insert "\n" line)))))
 
 ;; Keymaps
 ;; -------
