@@ -383,6 +383,7 @@ non-nil に設定されているとインストールに失敗するので一時
 (bind-keys :map global-map
            ("M-n"   . scroll-up-line)
            ("M-p"   . scroll-down-line)
+           ("M-SPC" . cycle-spacing)
            ("C-M-y" . duplicate-line)
            :map ctl-x-map
            ("-" . shrink-window)
