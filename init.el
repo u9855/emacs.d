@@ -253,6 +253,8 @@ non-nil に設定されているとインストールに失敗するので一時
              easy-repeat-additional-commands))
    '(easy-repeat-mode t)))
 
+(use-package expand-region)
+
 (use-package ffap
   :config
   (custom-set-variables
