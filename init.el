@@ -282,6 +282,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (bind-key "f" 'recentf-open-files mode-specific-map))
 
+(use-package shackle)
+
 (use-package solarized-theme
   :config
   (custom-set-variables
