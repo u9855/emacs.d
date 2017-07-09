@@ -287,7 +287,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(shackle-rules (-union '((occur-mode :align t)
                              ("*vc-log*" :align t))
-                           shackle-rules))))
+                           shackle-rules))
+   '(shackle-mode t)))
 
 (use-package solarized-theme
   :config
