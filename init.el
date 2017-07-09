@@ -305,7 +305,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind (:map goto-map ("o" . switch-window))
   :config
   (custom-set-variables
-   '(switch-window-timeout 2)))
+   '(switch-window-timeout 2)
+   '(switch-window-shortcut-style 'qwerty)))
 
 (use-package whitespace
   :diminish global-whitespace-mode
