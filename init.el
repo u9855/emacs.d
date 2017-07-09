@@ -82,6 +82,7 @@
  '(tool-bar-mode nil)
  '(scroll-bar-mode nil)
  ;; Help
+ '(help-window-select t)
  '(text-quoting-style 'straight)
  ;; I18n
  '(eol-mnemonic-dos "[dos]")
