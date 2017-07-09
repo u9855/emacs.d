@@ -306,7 +306,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(switch-window-timeout 2)
-   '(switch-window-shortcut-style 'qwerty)))
+   '(switch-window-shortcut-style 'qwerty)
+   '(switch-window-qwerty-shortcuts
+     '("a" "s" "d" "f" "j" "k" "l" ";" "q" "w" "e" "r" "u" "i" "o" "p"))))
 
 (use-package whitespace
   :diminish global-whitespace-mode
