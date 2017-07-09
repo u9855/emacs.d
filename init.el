@@ -253,7 +253,10 @@ non-nil に設定されているとインストールに失敗するので一時
              easy-repeat-additional-commands))
    '(easy-repeat-mode t)))
 
-(use-package expand-region)
+(use-package expand-region
+  :bind (:map mode-specific-map
+         ("C-@" . er/expand-region)
+         ("C--" . er/contract-region)))
 
 (use-package ffap
   :config
