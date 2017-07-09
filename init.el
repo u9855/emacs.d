@@ -241,7 +241,8 @@ non-nil に設定されているとインストールに失敗するので一時
     '(previous-buffer scroll-left scroll-right scroll-other-window-down
       backward-up-list down-list backward-kill-sentence backward-kill-sexp
       enlarge-window shrink-window enlarge-window-horizontally
-      shrink-window-horizontally winner-undo))
+      shrink-window-horizontally winner-undo goto-last-change
+      goto-last-change-reverse))
 
   (custom-set-variables
    '(easy-repeat-command-list
