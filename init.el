@@ -264,6 +264,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (ffap-bindings))
 
+(use-package goto-chg)
+
 (use-package log-edit
   :defer t
   :config (custom-set-variables
