@@ -304,6 +304,7 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package switch-window
   :bind (:map ctl-x-4-map
          ("0" . switch-window-then-delete)
+         ("1" . switch-window-then-maximize)
          ("t" . switch-window-then-swap-buffer)
          :map goto-map
          ("o" . switch-window))
