@@ -266,7 +266,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package goto-chg
   :bind (:map goto-map
-         (";" . goto-last-change)))
+         (";" . goto-last-change)
+         ("," . goto-last-change-reverse)))
 
 (use-package log-edit
   :defer t
