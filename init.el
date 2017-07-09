@@ -302,7 +302,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(whitespace-trailing ((t (:background "#eee8d5"))))))
 
 (use-package switch-window
-  :bind (:map goto-map ("o" . switch-window)))
+  :bind (:map goto-map ("o" . switch-window))
+  :config
+  (custom-set-variables
+   '(switch-window-timeout 2)))
 
 (use-package whitespace
   :diminish global-whitespace-mode
