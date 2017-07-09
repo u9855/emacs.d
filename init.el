@@ -264,7 +264,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (ffap-bindings))
 
-(use-package goto-chg)
+(use-package goto-chg
+  :bind (:map goto-map
+         (";" . goto-last-change)))
 
 (use-package log-edit
   :defer t
