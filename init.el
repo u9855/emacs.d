@@ -381,8 +381,9 @@ non-nil に設定されているとインストールに失敗するので一時
 (keyboard-translate ?\b ?\d)
 
 (bind-keys :map global-map
-           ("M-n" . scroll-up-line)
-           ("M-p" . scroll-down-line)
+           ("M-n"   . scroll-up-line)
+           ("M-p"   . scroll-down-line)
+           ("C-M-y" . duplicate-line)
            :map ctl-x-map
            ("-" . shrink-window)
            :map esc-map
