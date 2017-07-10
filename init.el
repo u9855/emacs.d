@@ -235,7 +235,10 @@ non-nil に設定されているとインストールに失敗するので一時
                      (t dabbrev-abbrev-char-regexp))))))
       (funcall fn arg))))
 
-(use-package easy-kill)
+(use-package easy-kill
+  :config
+  (custom-set-variables
+   '(easy-kill-unhighlight-key (kbd "RET"))))
 
 (use-package easy-repeat
   :config
