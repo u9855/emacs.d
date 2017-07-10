@@ -240,7 +240,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(easy-kill-alist (-union '((?. symbol " ")) easy-kill-alist))
    '(easy-kill-unhighlight-key (kbd "RET"))
-   '(easy-kill-try-things '(url email symbol sexp line))))
+   '(easy-kill-try-things '(url email symbol sexp line))
+   '(easy-mark-try-things easy-kill-try-things)))
 
 (use-package easy-repeat
   :config
