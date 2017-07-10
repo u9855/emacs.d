@@ -235,6 +235,8 @@ non-nil に設定されているとインストールに失敗するので一時
                      (t dabbrev-abbrev-char-regexp))))))
       (funcall fn arg))))
 
+(use-package easy-kill)
+
 (use-package easy-repeat
   :config
   (defvar easy-repeat-additional-commands
