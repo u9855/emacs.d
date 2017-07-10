@@ -236,6 +236,7 @@ non-nil に設定されているとインストールに失敗するので一時
       (funcall fn arg))))
 
 (use-package easy-kill
+  :bind ([remap kill-ring-save] . easy-kill)
   :config
   (custom-set-variables
    '(easy-kill-alist (-union '((?. symbol " ")) easy-kill-alist))
