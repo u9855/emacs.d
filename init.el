@@ -239,7 +239,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(easy-kill-alist (-union '((?. symbol " ")) easy-kill-alist))
-   '(easy-kill-unhighlight-key (kbd "RET"))))
+   '(easy-kill-unhighlight-key (kbd "RET"))
+   '(easy-kill-try-things '(url email symbol sexp line))))
 
 (use-package easy-repeat
   :config
