@@ -242,7 +242,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(easy-kill-alist (-union '((?. symbol " ")) easy-kill-alist))
    '(easy-kill-unhighlight-key (kbd "RET"))
    '(easy-kill-try-things '(url email symbol sexp line))
-   '(easy-mark-try-things easy-kill-try-things)))
+   '(easy-mark-try-things easy-kill-try-things))
+
+  (bind-key "C-d" 'easy-kill-delete-region easy-kill-base-map))
 
 (use-package easy-repeat
   :config
