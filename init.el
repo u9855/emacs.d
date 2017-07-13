@@ -409,6 +409,7 @@ non-nil に設定されているとインストールに失敗するので一時
 (keyboard-translate ?\b ?\d)
 
 (bind-keys :map global-map
+           ("C-w"   . backward-kill-word)
            ("M-n"   . scroll-up-line)
            ("M-p"   . scroll-down-line)
            ("M-SPC" . cycle-spacing)
