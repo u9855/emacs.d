@@ -419,6 +419,7 @@ non-nil に設定されているとインストールに失敗するので一時
            :map esc-map
            ("M-v" . scroll-other-window-down)
            :map region-bindings-mode-map
+           ("C-w" . kill-region)
            ("M-c" . capitalize-region)
            ("M-l" . downcase-region)
            ("M-u" . upcase-region))
