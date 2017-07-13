@@ -375,7 +375,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (advice-add 'yes-or-no-p :override 'y-or-n-p)
 
-(put 'scroll-left 'disabled nil)
+(--each '(scroll-left downcase-region upcase-region)
+  (put it 'disabled nil))
 
 (defun beginning-of-string (&optional arg)
   "Move point to the beginning of string object at point."
