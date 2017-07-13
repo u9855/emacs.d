@@ -416,7 +416,11 @@ non-nil に設定されているとインストールに失敗するので一時
            :map ctl-x-map
            ("-" . shrink-window)
            :map esc-map
-           ("M-v" . scroll-other-window-down))
+           ("M-v" . scroll-other-window-down)
+           :map region-bindings-mode-map
+           ("M-c" . capitalize-region)
+           ("M-l" . downcase-region)
+           ("M-u" . upcase-region))
 
 ;; Local Variables:
 ;; coding: utf-8-unix
