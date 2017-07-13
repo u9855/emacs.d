@@ -170,6 +170,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (dash-enable-font-lock))
 
 (use-package region-bindings-mode
+  :diminish region-bindings-mode
   :config (region-bindings-mode-enable))
 
 (use-package auto-save-buffers-enhanced
