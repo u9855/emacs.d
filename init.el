@@ -395,6 +395,9 @@ non-nil に設定されているとインストールに失敗するので一時
   (let ((x-select-enable-clipboard nil))
     (funcall fn arg)))
 
+(--each '(kill-word backward-kill-word)
+  (advice-add it :around 'x-select-inhibit-accessing-clipboard))
+
 (defun duplicate-line (arg)
   "Duplicate the current line ARG times."
   (interactive "p")
