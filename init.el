@@ -169,6 +169,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (dash-enable-font-lock))
 
+(use-package region-bindings-mode)
+
 (use-package auto-save-buffers-enhanced
   :config
   (custom-set-variables
