@@ -390,6 +390,11 @@ non-nil に設定されているとインストールに失敗するので一時
 (--each '(down-list forward-list)
   (advice-add it :before 'beginning-of-string))
 
+(defun x-select-inhibit-accessing-clipboard (fn arg)
+  "Inhibit kill commands from accessing the clipboard."
+  (let ((x-select-enable-clipboard nil))
+    (funcall fn arg)))
+
 (defun duplicate-line (arg)
   "Duplicate the current line ARG times."
   (interactive "p")
