@@ -303,7 +303,11 @@ non-nil に設定されているとインストールに失敗するので一時
          ("C-;" . mc/mark-next-like-this)
          ("C-," . mc/mark-previous-like-this))
   :config
-  (custom-set-variables '(mc/insert-numbers-default 1)))
+  (custom-set-variables '(mc/insert-numbers-default 1))
+
+  (bind-keys :map mc/keymap
+             ("C-M-;" . mc/skip-to-next-like-this)
+             ("C-M-," . mc/skip-to-previous-like-this)))
 
 (use-package recentf
   :config
