@@ -299,7 +299,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
-  :bind (:map region-bindings-mode-map
+  :bind (("M-*" . mc/mark-all-dwim)
+         :map region-bindings-mode-map
          ("C-;" . mc/mark-next-like-this)
          ("C-," . mc/mark-previous-like-this))
   :config
