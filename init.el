@@ -298,7 +298,9 @@ non-nil に設定されているとインストールに失敗するので一時
            '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
 (use-package multiple-cursors-core
-  :ensure multiple-cursors)
+  :ensure multiple-cursors
+  :config
+  (custom-set-variables '(mc/insert-numbers-default 1)))
 
 (use-package recentf
   :config
