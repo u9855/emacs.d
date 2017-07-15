@@ -94,6 +94,7 @@
  ;; Isearch
  '(search-ring-max 32)
  '(regexp-search-ring-max 32)
+ '(isearch-allow-scroll t)
  ;; Killing
  '(backward-delete-char-untabify-method nil)
  '(kill-do-not-save-duplicates t)
