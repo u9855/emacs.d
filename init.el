@@ -296,6 +296,8 @@ non-nil に設定されているとインストールに失敗するので一時
          (";" . goto-last-change)
          ("," . goto-last-change-reverse)))
 
+(use-package isearch-dabbrev)
+
 (use-package log-edit
   :defer t
   :config (custom-set-variables
