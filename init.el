@@ -316,7 +316,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(migemo-user-dictionary nil)
    '(migemo-regex-dictionary nil)
    '(migemo-coding-system 'utf-8-unix)
-   '(migemo-use-frequent-pattern-alist t)))
+   '(migemo-use-frequent-pattern-alist t)
+   '(migemo-frequent-pattern-alist-file
+     (expand-file-name "~/.cache/emacs/migemo-frequent"))))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
