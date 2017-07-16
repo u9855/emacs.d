@@ -304,6 +304,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (custom-set-variables
            '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
+(use-package migemo
+  :if (executable-find "cmigemo"))
+
 (use-package multiple-cursors-core
   :ensure multiple-cursors
   :bind (("M-*" . mc/mark-all-dwim)
