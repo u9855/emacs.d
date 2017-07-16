@@ -318,7 +318,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(migemo-coding-system 'utf-8-unix)
    '(migemo-use-frequent-pattern-alist t)
    '(migemo-frequent-pattern-alist-file
-     (expand-file-name "~/.cache/emacs/migemo-frequent"))))
+     (expand-file-name "~/.cache/emacs/migemo-frequent"))
+   '(migemo-isearch-min-length 3)))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
