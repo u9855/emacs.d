@@ -315,7 +315,8 @@ non-nil に設定されているとインストールに失敗するので一時
      (expand-file-name "~/.local/share/migemo/utf-8/migemo-dict"))
    '(migemo-user-dictionary nil)
    '(migemo-regex-dictionary nil)
-   '(migemo-coding-system 'utf-8-unix)))
+   '(migemo-coding-system 'utf-8-unix)
+   '(migemo-use-frequent-pattern-alist t)))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
