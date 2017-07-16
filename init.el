@@ -319,7 +319,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(migemo-use-frequent-pattern-alist t)
    '(migemo-frequent-pattern-alist-file
      (expand-file-name "~/.cache/emacs/migemo-frequent"))
-   '(migemo-isearch-min-length 3)))
+   '(migemo-isearch-min-length 3))
+
+  (bind-key "C-k" 'migemo-isearch-toggle-migemo isearch-mode-map))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
