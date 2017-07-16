@@ -321,7 +321,9 @@ non-nil に設定されているとインストールに失敗するので一時
      (expand-file-name "~/.cache/emacs/migemo-frequent"))
    '(migemo-isearch-min-length 3))
 
-  (bind-key "C-k" 'migemo-isearch-toggle-migemo isearch-mode-map))
+  (bind-key "C-k" 'migemo-isearch-toggle-migemo isearch-mode-map)
+
+  (migemo-init))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
