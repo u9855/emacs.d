@@ -308,7 +308,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :if (executable-find "cmigemo")
   :config
   (custom-set-variables
-   '(migemo-command "cmigemo")))
+   '(migemo-command "cmigemo")
+   '(migemo-options '("-e" "-q"))))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
