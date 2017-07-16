@@ -310,6 +310,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(migemo-command "cmigemo")
    '(migemo-options '("-e" "-q"))
+   '(migemo-isearch-enable-p nil)
    '(migemo-dictionary
      (expand-file-name "~/.local/share/migemo/utf-8/migemo-dict"))
    '(migemo-user-dictionary nil)
