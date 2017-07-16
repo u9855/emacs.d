@@ -309,7 +309,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(migemo-command "cmigemo")
-   '(migemo-options '("-e" "-q"))))
+   '(migemo-options '("-e" "-q"))
+   '(migemo-dictionary
+     (expand-file-name "~/.local/share/migemo/utf-8/migemo-dict"))))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
