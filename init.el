@@ -305,7 +305,10 @@ non-nil に設定されているとインストールに失敗するので一時
            '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
 (use-package migemo
-  :if (executable-find "cmigemo"))
+  :if (executable-find "cmigemo")
+  :config
+  (custom-set-variables
+   '(migemo-command "cmigemo")))
 
 (use-package multiple-cursors-core
   :ensure multiple-cursors
