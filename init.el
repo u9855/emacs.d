@@ -297,7 +297,8 @@ non-nil に設定されているとインストールに失敗するので一時
          ("," . goto-last-change-reverse)))
 
 (use-package imenu
-  :bind (:map search-map ("i" . imenu)))
+  :bind (:map search-map ("i" . imenu))
+  :config (add-hook 'imenu-after-jump-hook 'recenter))
 
 (use-package isearch-dabbrev
   :bind (:map isearch-mode-map ("M-/" . isearch-dabbrev-expand)))
