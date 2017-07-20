@@ -209,7 +209,10 @@ non-nil に設定されているとインストールに失敗するので一時
   (auto-save-buffers-enhanced t))
 
 (use-package avy
-  :bind (:map goto-map ("w" . avy-goto-word-1)))
+  :bind (:map goto-map ("w" . avy-goto-word-1))
+  :config (custom-set-variables
+           '(avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?t ?y ?u ?i ?o
+                        ?p ?z ?x ?c ?v ?b ?n ?m))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
