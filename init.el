@@ -208,6 +208,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (auto-save-buffers-enhanced t))
 
+(use-package avy)
+
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
