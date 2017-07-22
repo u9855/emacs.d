@@ -334,8 +334,7 @@ non-nil に設定されているとインストールに失敗するので一時
    '(migemo-coding-system 'utf-8-unix)
    '(migemo-use-frequent-pattern-alist t)
    '(migemo-frequent-pattern-alist-file
-     (expand-file-name "~/.cache/emacs/migemo-frequent"))
-   '(migemo-isearch-min-length 3))
+     (expand-file-name "~/.cache/emacs/migemo-frequent")))
 
   (bind-key "C-k" 'migemo-isearch-toggle-migemo isearch-mode-map)
 
