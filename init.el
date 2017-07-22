@@ -218,7 +218,8 @@ non-nil に設定されているとインストールに失敗するので一時
                 ?z ?x ?c ?v ?b ?n ?m)))
 
   (use-package avy-migemo
-    :if (executable-find "cmigemo")))
+    :if (executable-find "cmigemo")
+    :config (custom-set-variables '(avy-migemo-mode t))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
