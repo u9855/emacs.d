@@ -221,7 +221,8 @@ non-nil に設定されているとインストールに失敗するので一時
     :if (executable-find "cmigemo")
     :config (custom-set-variables '(avy-migemo-mode t))))
 
-(use-package avy-zap)
+(use-package avy-zap
+  :bind ([remap zap-to-char] . avy-zap-to-char))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
