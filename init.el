@@ -212,9 +212,13 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind (:map goto-map
          (":" . avy-goto-char)
          ("w" . avy-goto-word-1))
-  :config (custom-set-variables
-           '(avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?t ?y ?u ?i ?o
-                        ?p ?z ?x ?c ?v ?b ?n ?m))))
+  :config
+  (custom-set-variables
+   '(avy-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l ?q ?w ?e ?r ?t ?y ?u ?i ?o ?p
+                ?z ?x ?c ?v ?b ?n ?m)))
+
+  (use-package avy-migemo
+    :if (executable-find "cmigemo")))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
