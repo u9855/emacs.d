@@ -177,6 +177,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :diminish region-bindings-mode
   :config (region-bindings-mode-enable))
 
+(use-package anzu)
+
 (use-package auto-save-buffers-enhanced
   :config
   (custom-set-variables
