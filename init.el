@@ -192,7 +192,11 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (bind-keys :map global-map
              ([remap query-replace]        . anzu-query-replace)
-             ([remap query-replace-regexp] . anzu-query-replace-regexp)))
+             ([remap query-replace-regexp] . anzu-query-replace-regexp)
+             :map isearch-mode-map
+             ([remap isearch-query-replace] . anzu-isearch-query-replace)
+             ([remap isearch-query-replace-regexp] .
+              anzu-isearch-query-replace-regexp)))
 
 (use-package auto-save-buffers-enhanced
   :config
