@@ -179,7 +179,13 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package anzu
   :config
-  (custom-set-variables '(anzu-minimum-input-length 3)))
+  (custom-set-variables '(anzu-minimum-input-length 3))
+
+  (custom-set-faces
+   '(anzu-match-1 ((t (:foreground "#fdf6e3" :background "#2aa198"))))
+   '(anzu-match-2 ((t (:foreground "#fdf6e3" :background "#859900"))))
+   '(anzu-match-3 ((t (:foreground "#fdf6e3" :background "#b58900"))))
+   '(anzu-replace-to ((t (:foreground "#d33682"))))))
 
 (use-package auto-save-buffers-enhanced
   :config
