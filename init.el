@@ -188,7 +188,11 @@ non-nil に設定されているとインストールに失敗するので一時
    '(anzu-match-1 ((t (:foreground "#fdf6e3" :background "#2aa198"))))
    '(anzu-match-2 ((t (:foreground "#fdf6e3" :background "#859900"))))
    '(anzu-match-3 ((t (:foreground "#fdf6e3" :background "#b58900"))))
-   '(anzu-replace-to ((t (:foreground "#d33682"))))))
+   '(anzu-replace-to ((t (:foreground "#d33682")))))
+
+  (bind-keys :map global-map
+             ([remap query-replace]        . anzu-query-replace)
+             ([remap query-replace-regexp] . anzu-query-replace-regexp)))
 
 (use-package auto-save-buffers-enhanced
   :config
