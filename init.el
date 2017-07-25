@@ -313,7 +313,8 @@ non-nil に設定されているとインストールに失敗するので一時
       backward-up-list down-list backward-kill-sentence backward-kill-sexp
       enlarge-window shrink-window enlarge-window-horizontally
       shrink-window-horizontally winner-undo goto-last-change
-      goto-last-change-reverse er/expand-region er/contract-region))
+      goto-last-change-reverse er/expand-region er/contract-region
+      bm-next bm-previous))
 
   (custom-set-variables
    '(easy-repeat-command-list
