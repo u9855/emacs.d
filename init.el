@@ -246,10 +246,12 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind ([remap zap-to-char] . avy-zap-to-char))
 
 (use-package bm
-  :config (custom-set-variables
-           '(bm-highlight-style (if window-system
-                                    'bm-highlight-only-fringe
-                                  'bm-highlight-only-line))))
+  :config
+  (custom-set-variables
+   '(bm-highlight-style (if window-system
+                            'bm-highlight-only-fringe
+                          'bm-highlight-only-line))
+   '(bm-recenter t)))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
