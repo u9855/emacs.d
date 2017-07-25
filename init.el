@@ -252,7 +252,11 @@ non-nil に設定されているとインストールに失敗するので一時
    '(bm-highlight-style (if window-system
                             'bm-highlight-only-fringe
                           'bm-highlight-only-line))
-   '(bm-recenter t)))
+   '(bm-recenter t))
+
+  (bind-keys :map goto-map
+             ("[" . bm-next)
+             ("]" . bm-previous)))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
