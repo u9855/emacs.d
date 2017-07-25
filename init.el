@@ -245,6 +245,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package avy-zap
   :bind ([remap zap-to-char] . avy-zap-to-char))
 
+(use-package bm)
+
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
