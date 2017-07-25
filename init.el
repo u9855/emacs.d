@@ -246,6 +246,7 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind ([remap zap-to-char] . avy-zap-to-char))
 
 (use-package bm
+  :bind (:map ctl-x-r-map ("@" . bm-toggle))
   :config
   (custom-set-variables
    '(bm-highlight-style (if window-system
