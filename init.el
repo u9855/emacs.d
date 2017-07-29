@@ -421,7 +421,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package rg
   :if (executable-find "rg")
-  :defer t)
+  :defer t
+  :config (custom-set-variables '(rg-custom-type-aliases nil)))
 
 (use-package shackle
   :config
