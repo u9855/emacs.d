@@ -279,7 +279,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(company-idle-delay 0.2)
    '(global-company-mode t))
 
-  (bind-keys :map company-active-map
+  (bind-keys :map company-mode-map
+             ("C-M-i" . company-complete)
+             :map company-active-map
              ("C-n" . company-select-next)
              ("C-p" . company-select-previous)
              ("C-s" . company-filter-candidates)
