@@ -282,6 +282,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (bind-keys :map company-active-map
              ("C-n" . company-select-next)
              ("C-p" . company-select-previous)
+             ("C-s" . company-filter-candidates)
              :map company-search-map
              ("C-n" . company-select-next)
              ("C-p" . company-select-previous)))
