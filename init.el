@@ -525,6 +525,9 @@ non-nil に設定されているとインストールに失敗するので一時
            ("-" . shrink-window)
            :map esc-map
            ("M-v" . scroll-other-window-down)
+           :map minibuffer-local-map
+           ("C-n" . next-line-or-history-element)
+           ("C-p" . previous-line-or-history-element)
            :map region-bindings-mode-map
            ("C-w" . kill-region)
            ("M-c" . capitalize-region)
