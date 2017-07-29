@@ -275,7 +275,8 @@ non-nil に設定されているとインストールに失敗するので一時
      '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
        company-preview-if-just-one-frontend
        company-echo-metadata-frontend))
-   '(company-idle-delay 0.2)))
+   '(company-idle-delay 0.2)
+   '(global-company-mode t)))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
