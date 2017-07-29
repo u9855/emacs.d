@@ -422,7 +422,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package shackle
   :config
   (custom-set-variables
-   '(shackle-rules (-union '((occur-mode :align t)
+   '(shackle-rules (-union '((ag-mode    :align t)
+                             (occur-mode :align t)
                              ("*vc-log*" :align t))
                            shackle-rules))
    '(shackle-mode t)))
