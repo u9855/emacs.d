@@ -268,7 +268,13 @@ non-nil に設定されているとインストールに失敗するので一時
              ("[" . bm-next)
              ("]" . bm-previous)))
 
-(use-package company)
+(use-package company
+  :config
+  (custom-set-variables
+   '(company-frontends
+     '(company-pseudo-tooltip-unless-just-one-frontend-with-delay
+       company-preview-if-just-one-frontend
+       company-echo-metadata-frontend))))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
