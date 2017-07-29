@@ -469,6 +469,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(wgrep-enable-key "\C-c\C-e")
    '(wgrep-auto-save-buffer t)))
 
+(use-package wgrep-ag
+  :after ag)
+
 (use-package whitespace
   :diminish global-whitespace-mode
   :config
