@@ -325,6 +325,8 @@ non-nil に設定されているとインストールに失敗するので一時
              easy-repeat-additional-commands))
    '(easy-repeat-mode t)))
 
+(use-package edit-list)
+
 (use-package expand-region
   :bind (:map mode-specific-map
          ("C-@" . er/expand-region)
