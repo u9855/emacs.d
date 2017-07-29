@@ -183,7 +183,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(ag-arguments (remove "--stats" ag-arguments))
-   '(ag-group-matches nil)))
+   '(ag-group-matches nil)
+   '(ag-highlight-search t)))
 
 (use-package anzu
   :diminish anzu-mode
