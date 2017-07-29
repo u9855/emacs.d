@@ -269,6 +269,7 @@ non-nil に設定されているとインストールに失敗するので一時
              ("]" . bm-previous)))
 
 (use-package company
+  :diminish company-mode
   :config
   (custom-set-variables
    '(company-frontends
