@@ -179,7 +179,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package ag
   :if (executable-find "ag")
-  :defer t)
+  :defer t
+  :config
+  (custom-set-variables
+   '(ag-arguments (remove "--stats" ag-arguments))))
 
 (use-package anzu
   :diminish anzu-mode
