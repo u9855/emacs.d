@@ -268,6 +268,8 @@ non-nil に設定されているとインストールに失敗するので一時
              ("[" . bm-next)
              ("]" . bm-previous)))
 
+(use-package company)
+
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
