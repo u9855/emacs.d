@@ -177,6 +177,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :diminish region-bindings-mode
   :config (region-bindings-mode-enable))
 
+(use-package ag
+  :if (executable-find "ag")
+  :defer t)
+
 (use-package anzu
   :diminish anzu-mode
   :config
