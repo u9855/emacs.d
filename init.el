@@ -182,7 +182,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (custom-set-variables
-   '(ag-arguments (remove "--stats" ag-arguments))))
+   '(ag-arguments (remove "--stats" ag-arguments))
+   '(ag-group-matches nil)))
 
 (use-package anzu
   :diminish anzu-mode
