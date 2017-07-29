@@ -466,7 +466,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :after grep
   :config
   (custom-set-variables
-   '(wgrep-enable-key "\C-c\C-e")))
+   '(wgrep-enable-key "\C-c\C-e")
+   '(wgrep-auto-save-buffer t)))
 
 (use-package whitespace
   :diminish global-whitespace-mode
