@@ -184,7 +184,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(ag-arguments (remove "--stats" ag-arguments))
    '(ag-group-matches nil)
-   '(ag-highlight-search t)))
+   '(ag-highlight-search t)
+   '(ag-reuse-buffers t)))
 
 (use-package anzu
   :diminish anzu-mode
