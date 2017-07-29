@@ -463,7 +463,10 @@ non-nil に設定されているとインストールに失敗するので一時
      '("a" "s" "d" "f" "j" "k" "l" "q" "w" "e" "r" "u" "i" "o" "p"))))
 
 (use-package wgrep
-  :after grep)
+  :after grep
+  :config
+  (custom-set-variables
+   '(wgrep-enable-key "\C-c\C-e")))
 
 (use-package whitespace
   :diminish global-whitespace-mode
