@@ -277,7 +277,11 @@ non-nil に設定されているとインストールに失敗するので一時
        company-preview-if-just-one-frontend
        company-echo-metadata-frontend))
    '(company-idle-delay 0.2)
-   '(global-company-mode t)))
+   '(global-company-mode t))
+
+  (bind-keys :map company-active-map
+             ("C-n" . company-select-next)
+             ("C-p" . company-select-previous)))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
