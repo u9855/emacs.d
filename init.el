@@ -462,6 +462,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(switch-window-qwerty-shortcuts
      '("a" "s" "d" "f" "j" "k" "l" "q" "w" "e" "r" "u" "i" "o" "p"))))
 
+(use-package wgrep
+  :after grep)
+
 (use-package whitespace
   :diminish global-whitespace-mode
   :config
