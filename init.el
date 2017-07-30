@@ -282,7 +282,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (use-package company-statistics
     :config
     (custom-set-variables
-     '(company-statistics-auto-save nil)))
+     '(company-statistics-auto-save nil)
+     '(company-statistics-auto-restore nil)))
 
   (bind-keys :map company-mode-map
              ("C-M-i" . company-complete)
