@@ -279,6 +279,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(company-idle-delay 0.2)
    '(global-company-mode t))
 
+  (use-package company-statistics)
+
   (bind-keys :map company-mode-map
              ("C-M-i" . company-complete)
              :map company-active-map
