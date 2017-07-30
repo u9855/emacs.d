@@ -296,7 +296,9 @@ non-nil に設定されているとインストールに失敗するので一時
              ("C-s" . company-filter-candidates)
              :map company-search-map
              ("C-n" . company-select-next)
-             ("C-p" . company-select-previous)))
+             ("C-p" . company-select-previous))
+
+  (unbind-key "C-w" company-active-map))
 
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
