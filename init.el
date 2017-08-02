@@ -392,7 +392,15 @@ non-nil に設定されているとインストールに失敗するので一時
          ("," . goto-last-change-reverse)))
 
 (use-package ibuffer
-  :bind ([remap list-buffers] . ibuffer))
+  :bind ([remap list-buffers] . ibuffer)
+  :config
+  (custom-set-variables
+   '(ibuffer-formats
+     '((mark modified read-only
+        " " (name 20 20 :left :elide) " " (size 9 -1 :right)
+        " " (mode 16 16 :left :elide) " " filename-and-process)
+       (mark modified read-only
+        " " (name 30 -1 :left :elide) " " filename-and-process)))))
 
 (use-package imenu
   :bind (:map search-map ("i" . imenu))
