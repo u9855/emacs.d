@@ -400,7 +400,8 @@ non-nil に設定されているとインストールに失敗するので一時
         " " (name 20 20 :left :elide) " " (size 9 -1 :right)
         " " (mode 16 16 :left :elide) " " filename-and-process)
        (mark modified read-only
-        " " (name 30 -1 :left :elide) " " filename-and-process)))))
+             " " (name 30 -1 :left :elide) " " filename-and-process)))
+   '(ibuffer-default-sorting-mode 'filename/process)))
 
 (use-package imenu
   :bind (:map search-map ("i" . imenu))
