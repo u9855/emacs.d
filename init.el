@@ -404,7 +404,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(ibuffer-default-sorting-mode 'filename/process)
    '(ibuffer-maybe-show-predicates
      (-union '("^\\*Completions\\*$" "^\\*Messages\\*$" "^\\*vc\\(-.+\\)*\\*$")
-             ibuffer-maybe-show-predicates))))
+             ibuffer-maybe-show-predicates))
+   '(ibuffer-save-with-custom nil)))
 
 (use-package imenu
   :bind (:map search-map ("i" . imenu))
