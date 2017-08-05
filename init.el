@@ -90,6 +90,9 @@
  '(eol-mnemonic-unix "[unix]")
  '(word-combining-categories
    (-difference word-combining-categories '((?C . ?H) (?C . ?K))))
+ '(word-separating-categories
+   (-union '((?H . ?k) (?K . ?H) (?K . ?k) (?k . ?H) (?k . ?K))
+           word-separating-categories))
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
