@@ -88,6 +88,8 @@
  '(eol-mnemonic-dos "[dos]")
  '(eol-mnemonic-mac "[mac]")
  '(eol-mnemonic-unix "[unix]")
+ '(word-combining-categories
+   (-difference word-combining-categories '((?C . ?H) (?C . ?K))))
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
