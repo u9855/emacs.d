@@ -367,7 +367,8 @@ non-nil に設定されているとインストールに失敗するので一時
      '(dired-bind-man nil)
      '(dired-bind-info nil)))
 
-  (use-package dired-hide-dotfiles))
+  (use-package dired-hide-dotfiles
+    :config (add-hook 'dired-mode-hook 'dired-hide-dotfiles-mode)))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
