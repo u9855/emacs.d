@@ -346,6 +346,10 @@ non-nil に設定されているとインストールに失敗するので一時
                      (t dabbrev-abbrev-char-regexp))))))
       (funcall fn arg))))
 
+(use-package dired
+  :defer t
+  :ensure nil)
+
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
   :config
