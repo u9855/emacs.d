@@ -140,6 +140,7 @@
 (dolist
     (target '(japanese-jisx0212 japanese-jisx0213.2004-1 katakana-jisx0201))
   (set-fontset-font t target (font-spec :family "Meiryo UI")))
+(set-fontset-font t 'unicode (font-spec :family "Meiryo UI") nil 'append)
 
 (dir-locals-set-class-variables
  'shared-library
