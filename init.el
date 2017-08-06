@@ -365,7 +365,9 @@ non-nil に設定されているとインストールに失敗するので一時
     (custom-set-variables
      '(dired-bind-jump nil)
      '(dired-bind-man nil)
-     '(dired-bind-info nil))))
+     '(dired-bind-info nil)))
+
+  (use-package dired-hide-dotfiles))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
