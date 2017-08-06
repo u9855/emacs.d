@@ -382,7 +382,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (custom-set-variables
-   '(ediff-make-buffers-readonly-at-startup t)))
+   '(ediff-make-buffers-readonly-at-startup t)
+   '(ediff-custom-diff-options "-u")))
 
 (use-package edit-list)
 
