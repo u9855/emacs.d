@@ -469,7 +469,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package ls-lisp
   :if (eq system-type 'windows-nt)
-  :ensure nil)
+  :ensure nil
+  :config (custom-set-variables '(ls-lisp-emulation 'MS-Windows)))
 
 (use-package migemo
   :if (executable-find "cmigemo")
