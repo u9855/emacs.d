@@ -467,6 +467,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (custom-set-variables
            '(log-edit-hook '(log-edit-insert-filenames-without-changelog))))
 
+(use-package ls-lisp
+  :if (eq system-type 'windows-nt)
+  :ensure nil)
+
 (use-package migemo
   :if (executable-find "cmigemo")
   :config
