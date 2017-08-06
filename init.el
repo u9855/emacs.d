@@ -356,7 +356,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(dired-keep-marker-hardlink nil)
    '(dired-keep-marker-symlink nil)
    '(dired-dwim-target t)
-   '(dired-hide-details-hide-information-lines nil)))
+   '(dired-hide-details-hide-information-lines nil)
+   '(dired-auto-revert-buffer 'dired-directory-changed-p)))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
