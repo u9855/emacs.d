@@ -379,7 +379,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(easy-repeat-mode t)))
 
 (use-package ediff
-  :defer t)
+  :defer t
+  :config
+  (custom-set-variables
+   '(ediff-make-buffers-readonly-at-startup t)))
 
 (use-package edit-list)
 
