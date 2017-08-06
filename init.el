@@ -383,7 +383,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(ediff-make-buffers-readonly-at-startup t)
-   '(ediff-custom-diff-options "-u")))
+   '(ediff-custom-diff-options "-u")
+   '(ediff-window-setup-function 'ediff-setup-windows-plain)))
 
 (use-package edit-list)
 
