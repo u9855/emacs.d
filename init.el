@@ -360,7 +360,12 @@ non-nil に設定されているとインストールに失敗するので一時
    '(dired-auto-revert-buffer 'dired-directory-changed-p))
 
   (use-package dired-x
-    :ensure nil))
+    :ensure nil
+    :init
+    (custom-set-variables
+     '(dired-bind-jump nil)
+     '(dired-bind-man nil)
+     '(dired-bind-info nil))))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
