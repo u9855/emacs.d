@@ -137,6 +137,10 @@
  '(hscroll-margin 0)
  '(hscroll-step 1))
 
+(dolist
+    (target '(japanese-jisx0212 japanese-jisx0213.2004-1 katakana-jisx0201))
+  (set-fontset-font t target (font-spec :family "Meiryo UI")))
+
 (dir-locals-set-class-variables
  'shared-library
  '((nil . ((buffer-read-only . t)))))
