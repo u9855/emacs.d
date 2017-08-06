@@ -348,7 +348,13 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package dired
   :defer t
-  :ensure nil)
+  :ensure nil
+  :config
+  (custom-set-variables
+   '(dired-keep-marker-rename nil)
+   '(dired-keep-marker-copy nil)
+   '(dired-keep-marker-hardlink nil)
+   '(dired-keep-marker-symlink nil)))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
