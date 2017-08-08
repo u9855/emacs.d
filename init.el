@@ -472,6 +472,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :ensure nil
   :config (custom-set-variables '(ls-lisp-emulation 'MS-Windows)))
 
+(use-package man
+  :defer t)
+
 (use-package migemo
   :if (executable-find "cmigemo")
   :config
