@@ -480,7 +480,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(Man-see-also-regexp "SEE ALSO\\|関連項目")
    '(Man-first-heading-regexp
      "^NAME$\\|^名[前称]$\\|^[ \t]*No manual entry fo.*$")
-   '(Man-synopsis-regexp "SYNOPSIS\\|書式")))
+   '(Man-synopsis-regexp "SYNOPSIS\\|書式")
+   '(Man-files-regexp "FILES\\>\\|ファイル\\>")))
 
 (use-package migemo
   :if (executable-find "cmigemo")
