@@ -481,7 +481,11 @@ non-nil に設定されているとインストールに失敗するので一時
    '(Man-first-heading-regexp
      "^NAME$\\|^名[前称]$\\|^[ \t]*No manual entry fo.*$")
    '(Man-synopsis-regexp "SYNOPSIS\\|書式")
-   '(Man-files-regexp "FILES\\>\\|ファイル\\>")))
+   '(Man-files-regexp "FILES\\>\\|ファイル\\>"))
+
+  (bind-keys :map Man-mode-map
+             ("f" . scroll-up-command)
+             ("b" . scroll-down-command)))
 
 (use-package migemo
   :if (executable-find "cmigemo")
