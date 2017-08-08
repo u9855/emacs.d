@@ -477,7 +477,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(Man-heading-regexp "^\\([[:alpha:]][[:alnum:] /-]+\\)$")
-   '(Man-see-also-regexp "SEE ALSO\\|関連項目")))
+   '(Man-see-also-regexp "SEE ALSO\\|関連項目")
+   '(Man-first-heading-regexp
+     "^NAME$\\|^名[前称]$\\|^[ \t]*No manual entry fo.*$")))
 
 (use-package migemo
   :if (executable-find "cmigemo")
