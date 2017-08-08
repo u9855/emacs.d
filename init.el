@@ -485,7 +485,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (bind-keys :map Man-mode-map
              ("f" . scroll-up-command)
-             ("b" . scroll-down-command)))
+             ("b" . scroll-down-command)
+             ("e" . scroll-up-line)
+             ("y" . scroll-down-line)))
 
 (use-package migemo
   :if (executable-find "cmigemo")
