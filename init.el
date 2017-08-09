@@ -449,7 +449,8 @@ non-nil に設定されているとインストールに失敗するので一時
              " " (name 30 -1 :left :elide) " " filename-and-process)))
    '(ibuffer-default-sorting-mode 'filename/process)
    '(ibuffer-maybe-show-predicates
-     (-union '("^\\*Completions\\*$" "^\\*Messages\\*$" "^\\*vc\\(-.+\\)*\\*$")
+     (-union '("^\\*Completions\\*$" "^\\*Messages\\*$" "^\\*WoMan-Log\\*$"
+               "^\\*vc\\(-.+\\)*\\*$")
              ibuffer-maybe-show-predicates))
    '(ibuffer-save-with-custom nil))
 
