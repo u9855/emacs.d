@@ -622,7 +622,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(woman-manpath (list (expand-file-name "~/.local/share/man")))
-   '(woman-cache-filename (expand-file-name "~/.cache/emacs/wmncache"))))
+   '(woman-cache-filename (expand-file-name "~/.cache/emacs/wmncache"))
+   '(woman-imenu-generic-expression
+     '((nil "\n\\([[:alpha:]].*\\)" 1)
+       ("*Subsections*" "^   \\([[:alpha:]].*\\)" 1)))))
 
 ;; Commands
 ;; --------
