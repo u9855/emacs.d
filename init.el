@@ -615,6 +615,9 @@ non-nil に設定されているとインストールに失敗するので一時
   (bind-keys :map ctl-x-map
              ("w"   . winner-undo)
              ("M-w" . winner-redo)))
+
+(use-package woman
+  :defer t)
 
 ;; Commands
 ;; --------
