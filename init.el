@@ -617,7 +617,8 @@ non-nil に設定されているとインストールに失敗するので一時
              ("M-w" . winner-redo)))
 
 (use-package woman
-  :defer t)
+  :defer t
+  :init (custom-set-variables '(woman-dired-keys nil)))
 
 ;; Commands
 ;; --------
