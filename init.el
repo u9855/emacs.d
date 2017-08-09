@@ -618,7 +618,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package woman
   :defer t
-  :init (custom-set-variables '(woman-dired-keys nil)))
+  :init (custom-set-variables '(woman-dired-keys nil))
+  :config
+  (custom-set-variables
+   '(woman-manpath (list (expand-file-name "~/.local/share/man")))))
 
 ;; Commands
 ;; --------
