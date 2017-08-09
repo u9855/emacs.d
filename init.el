@@ -318,8 +318,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (defvar dabbrev-additional-ignored-buffer-names
-    '("*Backtrace*" "*Completions*" "*Compile-Log*" "*Occur*" "*trace-output*"
-      "*vc*" "*vc-diff*"))
+    '("*Backtrace*" "*Completions*" "*Compile-Log*" "*Occur*" "*WoMan-Log*"
+      "*trace-output*" "*vc*" "*vc-diff*"))
 
   (custom-set-variables
    '(dabbrev-abbrev-skip-leading-regexp "[!$%&'*<>`]")
