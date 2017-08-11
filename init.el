@@ -557,6 +557,20 @@ non-nil に設定されているとインストールに失敗するので一時
    '(sdic-waei-dictionary-list
      '((sdicf-client "~/.local/share/sdic/jedict.sdic" (strategy grep)))))
 
+  (define-advice sdic-display-buffer
+      (:override (&optional start-point) use-conditional-action)
+    "`display-buffer-alist' で設定したアクションを使用するためのアドバイス。"
+    (let ((cur-buf (current-buffer)))
+      (unwind-protect
+          (with-selected-window (display-buffer sdic-buffer-name)
+            (goto-char (or start-point (point)))
+            (set-window-start (selected-window) (point))
+            (if (and sdic-warning-hidden-entry
+                     (> (point) (point-min)))
+                (message "この前にもエントリがあります。"))
+            (buffer-size))
+        (set-buffer cur-buf))))
+
   (when (executable-find "rg")
     (define-advice sdicf-grep-available (:override (sdic) file-check-only)
       (or (file-readable-p (sdicf-get-filename sdic))
