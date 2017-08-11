@@ -548,7 +548,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :load-path (lambda () (expand-file-name "../sdic" package-user-dir))
   :config
   (custom-set-variables
-   '(sdic-default-coding-system 'utf-8-unix)))
+   '(sdic-default-coding-system 'utf-8-unix)
+   '(sdicf-default-coding-system sdic-default-coding-system)))
 
 (use-package shackle
   :config
