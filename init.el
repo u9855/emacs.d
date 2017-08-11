@@ -559,7 +559,25 @@ non-nil に設定されているとインストールに失敗するので一時
   (when (executable-find "rg")
     (define-advice sdicf-grep-available (:override (sdic) file-check-only)
       (or (file-readable-p (sdicf-get-filename sdic))
-          (signal 'sdicf-missing-file (list (sdicf-get-filename sdic)))))))
+          (signal 'sdicf-missing-file (list (sdicf-get-filename sdic)))))
+
+    (define-advice sdicf-grep-search
+        (:override (sdic pattern &optional case regexp) rg-search)
+      "Search PATTERN from SDIC using rg."
+      (sdicf-grep-init sdic)
+      (with-current-buffer (sdicf-get-buffer sdic)
+        (erase-buffer)
+        (let ((default-process-coding-system
+                (cons sdicf-default-coding-system
+                      (cdr default-process-coding-system))))
+          (apply 'call-process "rg" nil t nil
+                 (append (if case '("-i"))
+                         (if regexp '("-e") '("-F"))
+                         (list pattern (sdicf-get-filename sdic)))))
+        (goto-char (point-min))
+        (let (entries)
+          (while (not (eobp)) (sdicf-search-internal))
+          (-uniq (-sort 'string< entries)))))))
 
 (use-package shackle
   :config
