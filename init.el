@@ -552,7 +552,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(sdicf-default-coding-system sdic-default-coding-system)
    '(sdic-eiwa-dictionary-list
      '((sdicf-client "~/.local/share/sdic/eedict.sdic" (strategy grep))
-       (sdicf-client "~/.local/share/sdic/gene.sdic" (strategy grep))))))
+       (sdicf-client "~/.local/share/sdic/gene.sdic" (strategy grep))))
+   '(sdic-waei-dictionary-list
+     '((sdicf-client "~/.local/share/sdic/jedict.sdic" (strategy grep))))))
 
 (use-package shackle
   :config
