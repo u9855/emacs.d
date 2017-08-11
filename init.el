@@ -543,6 +543,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config (custom-set-variables '(rg-custom-type-aliases nil)))
 
+(use-package sdic
+  :ensure nil
+  :load-path (lambda () (expand-file-name "../sdic" package-user-dir)))
+
 (use-package shackle
   :config
   (custom-set-variables
