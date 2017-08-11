@@ -665,6 +665,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables '(winner-mode t))
 
+  (with-eval-after-load 'sdic
+    (add-to-list 'winner-boring-buffers sdic-buffer-name))
+
   (with-eval-after-load 'xref
     (add-to-list 'winner-boring-buffers xref-buffer-name))
 
