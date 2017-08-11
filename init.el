@@ -600,6 +600,7 @@ non-nil に設定されているとインストールに失敗するので一時
    '(shackle-rules (-union '((ag-mode    :align t)
                              (occur-mode :align t)
                              (rg-mode    :align t)
+                             (sdic-mode  :align t :select t :ratio 0.3)
                              ("*vc-log*" :align t))
                            shackle-rules))
    '(shackle-mode t)))
