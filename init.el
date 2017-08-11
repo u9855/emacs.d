@@ -554,7 +554,12 @@ non-nil に設定されているとインストールに失敗するので一時
      '((sdicf-client "~/.local/share/sdic/eedict.sdic" (strategy grep))
        (sdicf-client "~/.local/share/sdic/gene.sdic" (strategy grep))))
    '(sdic-waei-dictionary-list
-     '((sdicf-client "~/.local/share/sdic/jedict.sdic" (strategy grep))))))
+     '((sdicf-client "~/.local/share/sdic/jedict.sdic" (strategy grep)))))
+
+  (when (executable-find "rg")
+    (define-advice sdicf-grep-available (:override (sdic) file-check-only)
+      (or (file-readable-p (sdicf-get-filename sdic))
+          (signal 'sdicf-missing-file (list (sdicf-get-filename sdic)))))))
 
 (use-package shackle
   :config
