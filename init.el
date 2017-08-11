@@ -592,7 +592,10 @@ non-nil に設定されているとインストールに失敗するので一時
         (goto-char (point-min))
         (let (entries)
           (while (not (eobp)) (sdicf-search-internal))
-          (-uniq (-sort 'string< entries)))))))
+          (-uniq (-sort 'string< entries))))))
+
+  (add-hook 'sdic-mode-hook
+            (lambda () (bind-key "q" 'quit-window sdic-mode-map))))
 
 (use-package shackle
   :config
