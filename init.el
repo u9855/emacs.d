@@ -454,6 +454,10 @@ non-nil に設定されているとインストールに失敗するので一時
              ibuffer-maybe-show-predicates))
    '(ibuffer-save-with-custom nil))
 
+  (with-eval-after-load 'sdic
+    (add-to-list 'ibuffer-maybe-show-predicates
+                 (concat "^" (regexp-quote sdic-buffer-name) "$")))
+
   (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
 
 (use-package imenu
