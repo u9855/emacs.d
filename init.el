@@ -433,6 +433,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (ffap-bindings))
 
+(use-package find-dired
+  :defer t)
+
 (use-package goto-chg
   :bind (:map goto-map
          (";" . goto-last-change)
