@@ -434,7 +434,10 @@ non-nil に設定されているとインストールに失敗するので一時
   (ffap-bindings))
 
 (use-package find-dired
-  :defer t)
+  :defer t
+  :config
+  (custom-set-variables
+   '(find-ls-option '("-exec ls -Fdhlv {} +" . "-Fdhlv"))))
 
 (use-package goto-chg
   :bind (:map goto-map
