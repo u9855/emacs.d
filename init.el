@@ -351,6 +351,7 @@ non-nil に設定されているとインストールに失敗するので一時
   :ensure nil
   :config
   (custom-set-variables
+   '(dired-listing-switches "-AFhlv")
    '(dired-keep-marker-rename nil)
    '(dired-keep-marker-copy nil)
    '(dired-keep-marker-hardlink nil)
