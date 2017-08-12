@@ -437,7 +437,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (custom-set-variables
-   '(find-ls-option '("-exec ls -Fdhlv {} +" . "-Fdhlv"))))
+   '(find-ls-option '("-exec ls -Fdhlv {} +" . "-Fdhlv"))
+   '(find-ls-subdir-switches dired-listing-switches)))
 
 (use-package goto-chg
   :bind (:map goto-map
