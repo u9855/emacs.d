@@ -488,7 +488,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package magit
   :bind (:map vc-prefix-map ("SPC" . magit-status)))
 
-(use-package magit-find-file)
+(use-package magit-find-file
+  :bind (:map vc-prefix-map ("C-f" . magit-find-file-completing-read)))
 
 (use-package man
   :defer t
