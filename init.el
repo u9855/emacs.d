@@ -489,7 +489,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind (:map vc-prefix-map ("SPC" . magit-status))
   :config
   (custom-set-variables
-   '(magit-log-margin '(t age-abbreviated magit-log-margin-width nil 18))))
+   '(magit-log-margin '(t age-abbreviated magit-log-margin-width nil 18))
+   '(magit-reflog-margin magit-log-margin)))
 
 (use-package magit-find-file
   :bind (:map vc-prefix-map ("C-f" . magit-find-file-completing-read)))
