@@ -486,7 +486,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (custom-set-variables '(ls-lisp-emulation 'MS-Windows)))
 
 (use-package magit
-  :bind (:map vc-prefix-map ("SPC" . magit-status)))
+  :bind (:map vc-prefix-map ("SPC" . magit-status))
+  :config
+  (custom-set-variables
+   '(magit-log-margin '(t age-abbreviated magit-log-margin-width nil 18))))
 
 (use-package magit-find-file
   :bind (:map vc-prefix-map ("C-f" . magit-find-file-completing-read)))
