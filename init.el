@@ -466,6 +466,10 @@ non-nil に設定されているとインストールに失敗するので一時
     (add-to-list 'ibuffer-maybe-show-predicates
                  (concat "^" (regexp-quote sdic-buffer-name) "$")))
 
+  (with-eval-after-load 'xref
+    (add-to-list 'ibuffer-maybe-show-predicates
+                 (concat "^" (regexp-quote xref-buffer-name) "$")))
+
   (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
 
 (use-package imenu
