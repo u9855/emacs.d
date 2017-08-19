@@ -562,7 +562,14 @@ non-nil に設定されているとインストールに失敗するので一時
                         (1+ (-find-index (-partial 'eq perspeen-current-ws)
                                          perspeen-ws-list))
                         (perspeen-ws-struct-name perspeen-current-ws))
-                (nth 1 perspeen-modestring-dividers)))))
+                (nth 1 perspeen-modestring-dividers))))
+
+  (define-advice perspeen-new-ws-internal
+      (:after (&optional name) kill-new-scratch)
+    "Kill the current buffer if it isn't equal the '*scratch*' buffer."
+    (unless (eq (current-buffer) (get-buffer-create "*scratch*"))
+      (kill-buffer))
+    (switch-to-buffer "*scratch*")))
 
 (use-package recentf
   :config
