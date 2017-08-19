@@ -551,6 +551,8 @@ non-nil に設定されているとインストールに失敗するので一時
              ("C-c C-;" . mc/unmark-next-like-this)
              ("C-c C-," . mc/unmark-previous-like-this)))
 
+(use-package perspeen)
+
 (use-package recentf
   :config
   (custom-set-variables
