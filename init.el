@@ -395,7 +395,7 @@ non-nil に設定されているとインストールに失敗するので一時
       enlarge-window shrink-window enlarge-window-horizontally
       shrink-window-horizontally winner-undo goto-last-change
       goto-last-change-reverse er/expand-region er/contract-region
-      bm-next bm-previous))
+      bm-next bm-previous perspeen-next-ws perspeen-previous-ws))
 
   (custom-set-variables
    '(easy-repeat-command-list
