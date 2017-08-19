@@ -551,7 +551,18 @@ non-nil に設定されているとインストールに失敗するので一時
              ("C-c C-;" . mc/unmark-next-like-this)
              ("C-c C-," . mc/unmark-previous-like-this)))
 
-(use-package perspeen)
+(use-package perspeen
+  :config
+  (define-advice perspeen-update-mode-string
+      (:override () display-only-current-ws)
+    "Display only information of the current workspace on the modeline."
+    (setq perspeen-modestring
+          (list (nth 0 perspeen-modestring-dividers)
+                (format "%d:%s"
+                        (1+ (-find-index (-partial 'eq perspeen-current-ws)
+                                         perspeen-ws-list))
+                        (perspeen-ws-struct-name perspeen-current-ws))
+                (nth 1 perspeen-modestring-dividers)))))
 
 (use-package recentf
   :config
