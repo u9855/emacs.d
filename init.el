@@ -571,7 +571,11 @@ non-nil に設定されているとインストールに失敗するので一時
     "Kill the current buffer if it isn't equal the '*scratch*' buffer."
     (unless (eq (current-buffer) (get-buffer-create "*scratch*"))
       (kill-buffer))
-    (switch-to-buffer "*scratch*")))
+    (switch-to-buffer "*scratch*"))
+
+  (bind-keys :map perspeen-command-map
+             ("C-n" . perspeen-next-ws)
+             ("C-p" . perspeen-previous-ws)))
 
 (use-package recentf
   :config
