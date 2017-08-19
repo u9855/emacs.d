@@ -553,6 +553,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package perspeen
   :config
+  (custom-set-variables '(perspeen-mode t))
+
   (define-advice perspeen-update-mode-string
       (:override () display-only-current-ws)
     "Display only information of the current workspace on the modeline."
