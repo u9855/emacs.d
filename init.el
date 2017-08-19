@@ -575,7 +575,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (bind-keys :map perspeen-command-map
              ("C-n" . perspeen-next-ws)
-             ("C-p" . perspeen-previous-ws)))
+             ("C-p" . perspeen-previous-ws)
+             ("C-z" . perspeen-goto-last-ws)))
 
 (use-package recentf
   :config
