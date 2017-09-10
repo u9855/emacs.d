@@ -458,17 +458,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(ibuffer-default-sorting-mode 'filename/process)
    '(ibuffer-maybe-show-predicates
      (-union '("^\\*Completions\\*$" "^\\*Messages\\*$" "^\\*WoMan-Log\\*$"
-               "^\\*magit[^:]+:" "^\\*vc\\(-.+\\)*\\*$")
+               "^\\*magit[^:]+:" "^\\*sdic\\*$" "^\\*vc\\(-.+\\)*\\*$"
+               "^\\*xref\\*$")
              ibuffer-maybe-show-predicates))
    '(ibuffer-save-with-custom nil))
-
-  (with-eval-after-load 'sdic
-    (add-to-list 'ibuffer-maybe-show-predicates
-                 (concat "^" (regexp-quote sdic-buffer-name) "$")))
-
-  (with-eval-after-load 'xref
-    (add-to-list 'ibuffer-maybe-show-predicates
-                 (concat "^" (regexp-quote xref-buffer-name) "$")))
 
   (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
 
