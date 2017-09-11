@@ -89,10 +89,12 @@
  '(eol-mnemonic-mac "[mac]")
  '(eol-mnemonic-unix "[unix]")
  '(word-combining-categories
-   (-difference word-combining-categories '((?C . ?H) (?C . ?K))))
+   (seq-difference word-combining-categories '((?C . ?H) (?C . ?K))))
  '(word-separating-categories
-   (-union '((?H . ?k) (?K . ?H) (?K . ?k) (?k . ?H) (?k . ?K))
-           word-separating-categories))
+     (dolist (category
+              '((?H . ?k) (?K . ?H) (?K . ?k) (?k . ?H) (?k . ?K))
+              word-separating-categories)
+       (add-to-list 'word-separating-categories category)))
  ;; Initialization
  '(inhibit-startup-screen t)
  '(initial-scratch-message nil)
