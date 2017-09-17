@@ -713,13 +713,10 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package winner
   :init (custom-set-variables '(winner-dont-bind-my-keys t))
   :config
-  (custom-set-variables '(winner-mode t))
-
-  (with-eval-after-load 'sdic
-    (add-to-list 'winner-boring-buffers sdic-buffer-name))
-
-  (with-eval-after-load 'xref
-    (add-to-list 'winner-boring-buffers xref-buffer-name))
+  (custom-set-variables
+   '(winner-boring-buffers
+     (-union '("*sdic*" "*xref*") winner-boring-buffers))
+   '(winner-mode t))
 
   (bind-keys :map ctl-x-map
              ("w"   . winner-undo)
