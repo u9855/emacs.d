@@ -463,7 +463,9 @@ non-nil に設定されているとインストールに失敗するので一時
         (-union '("^\\*Completions\\*$" "^\\*Ibuffer\\*$" "^\\*Messages\\*$"
                   "^\\*Woman-Log\\*$" "^\\*magit[^:]+:" "^\\*sdic\\*$"
                   "^\\*vc\\(-.+\\)*\\*$" "^\\*xref\\*$")
-                helm-boring-buffer-regexp-list)))))
+                helm-boring-buffer-regexp-list))))
+
+   (bind-keys ([remap switch-to-buffer] . helm-buffers-list)))
 
 (use-package ibuffer
   :bind ([remap list-buffers] . ibuffer)
