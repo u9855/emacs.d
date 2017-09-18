@@ -657,6 +657,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(shackle-rules
      (-union '((ag-mode                :align t)
+               (helm-major-mode        :align t)
                (occur-mode             :align t)
                (rg-mode                :align t)
                (sdic-mode              :align t :select t :ratio 0.3)
