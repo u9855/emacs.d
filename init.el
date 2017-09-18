@@ -454,7 +454,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-candidate-separator (make-string 72 ?-))
    '(helm-display-function 'display-buffer)
    '(helm-display-header-line nil)
-   '(helm-inherit-input-method nil))
+   '(helm-inherit-input-method nil)
+   '(helm-buffer-max-length 24))
 
    (with-eval-after-load 'helm-buffers
      (custom-set-variables
