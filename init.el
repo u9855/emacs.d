@@ -453,7 +453,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-input-idle-delay 0.1)
    '(helm-candidate-separator (make-string 72 ?-))
    '(helm-display-function 'display-buffer)
-   '(helm-display-header-line nil)))
+   '(helm-display-header-line nil)
+   '(helm-inherit-input-method nil)))
 
 (use-package ibuffer
   :bind ([remap list-buffers] . ibuffer)
