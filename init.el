@@ -471,6 +471,8 @@ non-nil に設定されているとインストールに失敗するので一時
        (:override (candidates source) disable-sort)
      candidates)
 
+   (require 'helm-config)
+
    (bind-keys ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)))
 
