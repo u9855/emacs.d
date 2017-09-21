@@ -482,7 +482,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
    (require 'helm-config)
 
-   (bind-keys ([remap switch-to-buffer]         . helm-buffers-list)
+   (bind-keys :map global-map
+              ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)))
 
 (use-package ibuffer
