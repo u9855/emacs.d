@@ -467,6 +467,12 @@ non-nil に設定されているとインストールに失敗するので一時
                   "^\\*vc\\(-.+\\)*\\*$" "^\\*xref\\*$")
                 helm-boring-buffer-regexp-list))))
 
+   (with-eval-after-load 'helm-files
+     (custom-set-variables
+      '(helm-for-files-preferred-list
+        (-difference helm-for-files-preferred-list
+                     '(helm-source-buffers-list helm-source-locate)))))
+
    (define-advice helm-buffers-sort-transformer
        (:override (candidates source) disable-sort)
      candidates)
