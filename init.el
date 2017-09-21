@@ -622,7 +622,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(recentf-menu-filter 'recentf-arrange-by-dir)
    '(recentf-mode t))
 
-  (bind-key "f" 'recentf-open-files mode-specific-map))
+  (unless (package-installed-p 'helm)
+    (bind-key "f" 'recentf-open-files mode-specific-map)))
 
 (use-package rg
   :if (executable-find "rg")
