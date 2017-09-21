@@ -458,7 +458,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-buffer-max-length 24)
    '(helm-M-x-requires-pattern 2)
    '(helm-command-prefix-key "C-c c")
-   '(helm-ff-fuzzy-matching nil))
+   '(helm-ff-fuzzy-matching nil)
+   '(helm-ff-skip-boring-files t))
 
    (with-eval-after-load 'helm-buffers
      (custom-set-variables
