@@ -461,7 +461,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-ff-fuzzy-matching nil)
    '(helm-ff-skip-boring-files t)
    '(helm-ff-guess-ffap-filenames t)
-   '(helm-imenu-execute-action-at-once-if-one nil))
+   '(helm-imenu-execute-action-at-once-if-one nil)
+   '(helm-man-or-woman-function 'woman))
 
    (with-eval-after-load 'helm-buffers
      (custom-set-variables
