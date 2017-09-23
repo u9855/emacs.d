@@ -488,7 +488,9 @@ non-nil に設定されているとインストールに失敗するので一時
               ([remap execute-extended-command] . helm-M-x)
               ([remap imenu]                    . helm-imenu)
               :map mode-specific-map
-              ("f" . helm-multi-files)))
+              ("f" . helm-multi-files)
+              :map search-map
+              ("M-i" . helm-imenu-in-all-buffers)))
 
 (use-package ibuffer
   :bind ([remap list-buffers] . ibuffer)
