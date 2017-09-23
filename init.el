@@ -494,7 +494,9 @@ non-nil に設定されているとインストールに失敗するので一時
               :map mode-specific-map
               ("f" . helm-multi-files)
               :map search-map
-              ("M-i" . helm-imenu-in-all-buffers)))
+              ("M-i" . helm-imenu-in-all-buffers)
+              :map isearch-mode-map
+              ("M-s M-o" . helm-multi-occur-from-isearch)))
 
 (use-package ibuffer
   :bind ([remap list-buffers] . ibuffer)
