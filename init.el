@@ -489,6 +489,7 @@ non-nil に設定されているとインストールに失敗するので一時
               ([remap execute-extended-command] . helm-M-x)
               ([remap imenu]                    . helm-imenu)
               ([remap occur]                    . helm-occur)
+              ([remap isearch-occur]            . helm-occur-from-isearch)
               ([remap yank-pop]                 . helm-show-kill-ring)
               :map mode-specific-map
               ("f" . helm-multi-files)
