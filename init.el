@@ -487,6 +487,7 @@ non-nil に設定されているとインストールに失敗するので一時
               ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)
               ([remap imenu]                    . helm-imenu)
+              ([remap yank-pop]                 . helm-show-kill-ring)
               :map mode-specific-map
               ("f" . helm-multi-files)
               :map search-map
