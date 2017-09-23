@@ -460,7 +460,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-command-prefix-key "C-c c")
    '(helm-ff-fuzzy-matching nil)
    '(helm-ff-skip-boring-files t)
-   '(helm-ff-guess-ffap-filenames t))
+   '(helm-ff-guess-ffap-filenames t)
+   '(helm-imenu-execute-action-at-once-if-one nil))
 
    (with-eval-after-load 'helm-buffers
      (custom-set-variables
