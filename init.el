@@ -472,7 +472,7 @@ non-nil に設定されているとインストールに失敗するので一時
                   "^\\*vc\\(-.+\\)*\\*$" "^\\*xref\\*$")
                 helm-boring-buffer-regexp-list))))
 
-   (with-eval-after-load 'helm-files
+   (with-eval-after-load 'helm-for-files
      (custom-set-variables
       '(helm-for-files-preferred-list
         (-difference helm-for-files-preferred-list
