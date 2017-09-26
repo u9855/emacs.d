@@ -486,6 +486,14 @@ non-nil に設定されているとインストールに失敗するので一時
 
    (add-hook 'after-init-hook 'helm-mode)
 
+   (with-eval-after-load 'helm-mode
+     (custom-set-variables
+      '(helm-completing-read-handlers-alist
+        (-union '((dired-at-point     . nil)
+                  (find-file-at-point . nil)
+                  (ffap               . nil))
+                helm-completing-read-handlers-alist))))
+
    (bind-keys :map global-map
               ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)
