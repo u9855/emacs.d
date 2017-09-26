@@ -492,7 +492,9 @@ non-nil に設定されているとインストールに失敗するので一時
         (-union '((dired-at-point     . nil)
                   (find-file-at-point . nil)
                   (ffap               . nil))
-                helm-completing-read-handlers-alist))))
+                helm-completing-read-handlers-alist)))
+
+     (diminish 'helm-mode))
 
    (bind-keys :map global-map
               ([remap switch-to-buffer]         . helm-buffers-list)
