@@ -496,6 +496,12 @@ non-nil に設定されているとインストールに失敗するので一時
 
      (diminish 'helm-mode))
 
+   (define-advice read-file-name
+       (:around (fn &rest args) disable-helm-completion)
+     (let ((helm-completing-read-handlers-alist
+            (list (cons (or (helm-this-command) this-command) nil))))
+       (apply fn args)))
+
    (bind-keys :map global-map
               ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)
