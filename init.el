@@ -529,8 +529,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(ibuffer-default-sorting-mode 'filename/process)
    '(ibuffer-maybe-show-predicates
      (-union '("^\\*Completions\\*$" "^\\*Messages\\*$" "^\\*WoMan-Log\\*$"
-               "^\\*magit[^:]+:" "^\\*sdic\\*$" "^\\*vc\\(-.+\\)*\\*$"
-               "^\\*xref\\*$")
+               "^\\*helm" "^\\*magit[^:]+:" "^\\*sdic\\*$"
+               "^\\*vc\\(-.+\\)*\\*$" "^\\*xref\\*$")
              ibuffer-maybe-show-predicates))
    '(ibuffer-save-with-custom nil))
 
