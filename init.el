@@ -658,6 +658,14 @@ non-nil に設定されているとインストールに失敗するので一時
    '(recentf-menu-filter 'recentf-arrange-by-dir)
    '(recentf-mode t))
 
+  (when (package-installed-p 'helm)
+    (custom-set-variables
+     '(recentf-exclude
+       (-union (-map (-compose 'regexp-quote
+                               (-partial 'expand-file-name "../"))
+                     (list data-directory package-user-dir))
+               recentf-exclude))))
+
   (unless (package-installed-p 'helm)
     (bind-key "f" 'recentf-open-files mode-specific-map)))
 
