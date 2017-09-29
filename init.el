@@ -436,7 +436,9 @@ non-nil に設定されているとインストールに失敗するので一時
   (ffap-bindings))
 
 (use-package filecache
-  :if (package-installed-p 'helm))
+  :if (package-installed-p 'helm)
+  :config (add-hook 'after-init-hook
+                    (lambda () (file-cache-add-directory-list load-path))))
 
 (use-package find-dired
   :defer t
