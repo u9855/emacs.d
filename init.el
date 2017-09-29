@@ -664,7 +664,9 @@ non-nil に設定されているとインストールに失敗するので一時
        (-union (-map (-compose 'regexp-quote
                                (-partial 'expand-file-name "../"))
                      (list data-directory package-user-dir))
-               recentf-exclude))))
+               recentf-exclude)))
+
+    (add-hook 'after-init-hook 'recentf-cleanup))
 
   (unless (package-installed-p 'helm)
     (bind-key "f" 'recentf-open-files mode-specific-map)))
