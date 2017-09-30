@@ -285,7 +285,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :defer t
   :config
   (custom-set-variables
-   '(bookmark-save-flag 1)))
+   '(bookmark-save-flag 1)
+   '(bookmark-default-file (expand-file-name "~/.cache/emacs/bookmarks"))))
 
 (use-package company
   :diminish company-mode
