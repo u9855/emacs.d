@@ -281,6 +281,9 @@ non-nil に設定されているとインストールに失敗するので一時
              ("[" . bm-next)
              ("]" . bm-previous)))
 
+(use-package bookmark
+  :defer t)
+
 (use-package company
   :diminish company-mode
   :config
