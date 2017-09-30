@@ -282,7 +282,10 @@ non-nil に設定されているとインストールに失敗するので一時
              ("]" . bm-previous)))
 
 (use-package bookmark
-  :defer t)
+  :defer t
+  :config
+  (custom-set-variables
+   '(bookmark-save-flag 1)))
 
 (use-package company
   :diminish company-mode
