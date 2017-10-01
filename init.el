@@ -515,6 +515,9 @@ non-nil に設定されているとインストールに失敗するので一時
             (list (cons (or (helm-this-command) this-command) nil))))
        (apply fn args)))
 
+   (use-package helm-bm
+     :after bm)
+
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
               ([remap switch-to-buffer]         . helm-buffers-list)
