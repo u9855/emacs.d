@@ -467,6 +467,7 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-display-function 'display-buffer)
    '(helm-display-header-line nil)
    '(helm-inherit-input-method nil)
+   '(helm-bookmark-show-location t)
    '(helm-buffer-max-length 24)
    '(helm-M-x-requires-pattern 2)
    '(helm-command-prefix-key "C-c c")
