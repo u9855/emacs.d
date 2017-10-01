@@ -516,6 +516,7 @@ non-nil に設定されているとインストールに失敗するので一時
        (apply fn args)))
 
    (bind-keys :map global-map
+              ([remap bookmark-jump]            . helm-filtered-bookmarks)
               ([remap switch-to-buffer]         . helm-buffers-list)
               ([remap execute-extended-command] . helm-M-x)
               ([remap imenu]                    . helm-imenu)
