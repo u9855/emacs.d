@@ -519,7 +519,10 @@ non-nil に設定されているとインストールに失敗するので一時
      :after bm
      :config
      (custom-set-variables
-      '(helm-source-bm (remove '(multiline) helm-source-bm))))
+      '(helm-source-bm (remove '(multiline) helm-source-bm)))
+
+     (with-eval-after-load 'helm-bookmark
+       (add-to-list 'helm-bookmark-default-filtered-sources 'helm-source-bm)))
 
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
