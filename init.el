@@ -584,7 +584,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(magit-reflog-margin magit-log-margin))
 
   (add-hook 'git-commit-mode-hook
-            (-partial 'set-buffer-file-coding-system 'utf-8-unix)))
+            (-partial 'set-buffer-file-coding-system 'utf-8-unix))
+
+  (remove-hook 'server-switch-hook 'magit-commit-diff))
 
 (use-package magit-find-file
   :bind (:map vc-prefix-map ("C-f" . magit-find-file-completing-read)))
