@@ -581,7 +581,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(magit-log-margin '(t age-abbreviated magit-log-margin-width nil 18))
-   '(magit-reflog-margin magit-log-margin)))
+   '(magit-reflog-margin magit-log-margin))
+
+  (add-hook 'git-commit-mode-hook
+            (-partial 'set-buffer-file-coding-system 'utf-8-unix)))
 
 (use-package magit-find-file
   :bind (:map vc-prefix-map ("C-f" . magit-find-file-completing-read)))
