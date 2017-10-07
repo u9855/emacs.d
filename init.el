@@ -464,7 +464,6 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(helm-input-idle-delay 0.1)
    '(helm-candidate-separator (make-string 72 ?-))
-   '(helm-display-function 'display-buffer)
    '(helm-display-header-line nil)
    '(helm-inherit-input-method nil)
    '(helm-bookmark-show-location t)
@@ -478,6 +477,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-ff-guess-ffap-filenames t)
    '(helm-imenu-execute-action-at-once-if-one nil)
    '(helm-man-or-woman-function 'woman))
+
+  (advice-add 'helm-default-display-buffer :override 'display-buffer)
 
    (with-eval-after-load 'helm-buffers
      (custom-set-variables
