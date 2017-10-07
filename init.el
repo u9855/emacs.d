@@ -522,7 +522,14 @@ non-nil に設定されているとインストールに失敗するので一時
      (custom-set-variables
       '(helm-ag-base-command (if (executable-find "rg")
                                  "rg --line-number --smart-case --no-heading"
-                               "ag --numbers --smart-case --nogroup"))))
+                               "ag --numbers --smart-case --nogroup")))
+
+     (defun helm-ag--set-process-coding-system (fn)
+       "Prevent garbled characters at input and output of FN."
+       (let ((default-process-coding-system
+               (cons 'utf-8-unix (cdr default-process-coding-system)))
+             (buffer-file-coding-system nil))
+         (funcall fn))))
 
    (use-package helm-bm
      :after bm
