@@ -529,7 +529,10 @@ non-nil に設定されているとインストールに失敗するので一時
        (let ((default-process-coding-system
                (cons 'utf-8-unix (cdr default-process-coding-system)))
              (buffer-file-coding-system nil))
-         (funcall fn))))
+         (funcall fn)))
+
+     (--each '(helm-ag--init helm-ag--do-ag-candidate-process)
+       (advice-add it :around 'helm-ag--set-process-coding-system)))
 
    (use-package helm-bm
      :after bm
