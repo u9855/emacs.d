@@ -517,7 +517,12 @@ non-nil に設定されているとインストールに失敗するので一時
 
    (use-package helm-ag
      :if (-any? 'executable-find '("ag" "rg"))
-     :defer t)
+     :defer t
+     :config
+     (custom-set-variables
+      '(helm-ag-base-command (if (executable-find "rg")
+                                 "rg --line-number --smart-case --no-heading"
+                               "ag --numbers --smart-case --nogroup"))))
 
    (use-package helm-bm
      :after bm
