@@ -515,6 +515,10 @@ non-nil に設定されているとインストールに失敗するので一時
             (list (cons (or (helm-this-command) this-command) nil))))
        (apply fn args)))
 
+   (use-package helm-ag
+     :if (-any? 'executable-find '("ag" "rg"))
+     :defer t)
+
    (use-package helm-bm
      :after bm
      :config
