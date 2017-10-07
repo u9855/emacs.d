@@ -472,6 +472,7 @@ non-nil に設定されているとインストールに失敗するので一時
    '(helm-command-prefix-key "C-c c")
    '(helm-turn-on-show-completion nil)
    '(helm-show-completion-use-special-display nil)
+   '(helm-locate-library-fuzzy-match nil)
    '(helm-ff-fuzzy-matching nil)
    '(helm-ff-skip-boring-files t)
    '(helm-ff-guess-ffap-filenames t)
