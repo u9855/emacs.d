@@ -560,7 +560,9 @@ non-nil に設定されているとインストールに失敗するので一時
               :map search-map
               ("M-i" . helm-imenu-in-all-buffers)
               :map isearch-mode-map
-              ("M-s M-o" . helm-multi-occur-from-isearch)))
+              ("M-s M-o" . helm-multi-occur-from-isearch)
+              :map helm-command-map
+              ("TAB" . helm-lisp-completion-at-point)))
 
 (use-package ibuffer
   :bind ([remap list-buffers] . ibuffer)
