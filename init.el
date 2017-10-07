@@ -517,7 +517,6 @@ non-nil に設定されているとインストールに失敗するので一時
 
    (use-package helm-ag
      :if (-any? 'executable-find '("ag" "rg"))
-     :defer t
      :bind ([remap helm-do-grep-ag] . helm-do-ag)
      :config
      (custom-set-variables
