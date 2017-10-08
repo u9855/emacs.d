@@ -834,6 +834,9 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package wgrep-ag
   :after ag)
 
+(use-package wgrep-helm
+  :after helm-regexp)
+
 (use-package whitespace
   :diminish global-whitespace-mode
   :config
