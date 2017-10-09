@@ -830,7 +830,11 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(web-mode-script-padding 2)
    '(web-mode-style-padding 2)
-   '(web-mode-block-padding 2)))
+   '(web-mode-block-padding 2)
+   '(web-mode-markup-indent-offset 2)
+   '(web-mode-css-indent-offset 2)
+   '(web-mode-code-indent-offset 2)
+   '(web-mode-sql-indent-offset 2)))
 
 (use-package wgrep
   :after grep
