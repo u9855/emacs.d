@@ -834,7 +834,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(web-mode-markup-indent-offset 2)
    '(web-mode-css-indent-offset 2)
    '(web-mode-code-indent-offset 2)
-   '(web-mode-sql-indent-offset 2)))
+   '(web-mode-sql-indent-offset 2)
+   '(web-mode-enable-css-colorization nil)))
 
 (use-package wgrep
   :after grep
