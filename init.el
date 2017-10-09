@@ -825,7 +825,12 @@ non-nil に設定されているとインストールに失敗するので一時
      '("a" "s" "d" "f" "j" "k" "l" "q" "w" "e" "r" "u" "i" "o" "p"))))
 
 (use-package web-mode
-  :mode ("\\.[sx]?html?\\'" . web-mode))
+  :mode ("\\.[sx]?html?\\'" . web-mode)
+  :config
+  (custom-set-variables
+   '(web-mode-script-padding 2)
+   '(web-mode-style-padding 2)
+   '(web-mode-block-padding 2)))
 
 (use-package wgrep
   :after grep
