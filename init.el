@@ -837,7 +837,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(web-mode-sql-indent-offset 2)
    '(web-mode-enable-css-colorization nil)
    '(web-mode-enable-whitespace-fontification t)
-   '(web-mode-display-table nil)))
+   '(web-mode-display-table nil))
+
+  (custom-set-faces
+   '(web-mode-whitespace-face ((t (:background "#eee8d5"))))))
 
 (use-package wgrep
   :after grep
