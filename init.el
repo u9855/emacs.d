@@ -861,6 +861,7 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(whitespace-style '(face tabs trailing))
    '(whitespace-trailing-regexp "\\([ \t\u00A0\u3000]+\\)$")
+   '(whitespace-global-modes '(not web-mode))
    '(global-whitespace-mode t)))
 
 (use-package winner
