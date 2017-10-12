@@ -323,6 +323,9 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package cp5022x
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
+(use-package css-mode
+  :defer t)
+
 (use-package dabbrev
   :defer t
   :config
