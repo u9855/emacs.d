@@ -324,7 +324,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (define-coding-system-alias 'euc-jp 'cp51932))
 
 (use-package css-mode
-  :defer t)
+  :defer t
+  :config (custom-set-variables '(css-indent-offset 2)))
 
 (use-package dabbrev
   :defer t
