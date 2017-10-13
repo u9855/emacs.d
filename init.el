@@ -551,6 +551,9 @@ non-nil に設定されているとインストールに失敗するので一時
      (with-eval-after-load 'helm-bookmark
        (add-to-list 'helm-bookmark-default-filtered-sources 'helm-source-bm)))
 
+   (use-package helm-css-scss
+     :after css-mode)
+
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
               ([remap switch-to-buffer]         . helm-buffers-list)
