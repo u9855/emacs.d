@@ -559,7 +559,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
      (bind-keys :map css-mode-map
                 ([remap imenu]                     . helm-css-scss)
-                ([remap helm-imenu-in-all-buffers] . helm-css-scss-multi)))
+                ([remap helm-imenu-in-all-buffers] . helm-css-scss-multi)
+                :map helm-css-scss-map
+                ("M-i" . helm-css-scss-multi-from-helm-css-scss)))
 
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
