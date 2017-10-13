@@ -552,7 +552,10 @@ non-nil に設定されているとインストールに失敗するので一時
        (add-to-list 'helm-bookmark-default-filtered-sources 'helm-source-bm)))
 
    (use-package helm-css-scss
-     :after css-mode)
+     :after css-mode
+     :config
+     (custom-set-variables
+      '(helm-css-scss-split-window-function 'helm-default-display-buffer)))
 
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
