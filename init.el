@@ -555,7 +555,10 @@ non-nil に設定されているとインストールに失敗するので一時
      :after css-mode
      :config
      (custom-set-variables
-      '(helm-css-scss-split-window-function 'helm-default-display-buffer)))
+      '(helm-css-scss-split-window-function 'helm-default-display-buffer))
+
+     (bind-keys :map css-mode-map
+                ([remap imenu] . helm-css-scss)))
 
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
