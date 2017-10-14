@@ -435,7 +435,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :after (css-mode sgml-mode web-mode)
   :config
   (custom-set-variables
-   '(emmet-indentation 2)))
+   '(emmet-indentation 2)
+   '(emmet-self-closing-tag-style "")))
 
 (use-package expand-region
   :bind (:map mode-specific-map
