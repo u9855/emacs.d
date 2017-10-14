@@ -429,6 +429,11 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package edit-list)
 
+;; Cheat Sheet
+;; https://docs.emmet.io/cheat-sheet/
+(use-package emmet-mode
+  :after (css-mode sgml-mode web-mode))
+
 (use-package expand-region
   :bind (:map mode-specific-map
          ("C-@" . er/expand-region)
