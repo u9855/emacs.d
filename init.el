@@ -437,7 +437,8 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(emmet-indentation 2)
    '(emmet-self-closing-tag-style "")
-   '(emmet-insert-flash-time 0.01)))
+   '(emmet-insert-flash-time 0.01)
+   '(emmet-move-cursor-between-quotes t)))
 
 (use-package expand-region
   :bind (:map mode-specific-map
