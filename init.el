@@ -438,7 +438,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(emmet-indentation 2)
    '(emmet-self-closing-tag-style "")
    '(emmet-insert-flash-time 0.01)
-   '(emmet-move-cursor-between-quotes t)))
+   '(emmet-move-cursor-between-quotes t))
+
+  (--each '(css-mode-hook sgml-mode-hook web-mode-hook)
+    (add-hook it 'emmet-mode)))
 
 (use-package expand-region
   :bind (:map mode-specific-map
