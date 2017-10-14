@@ -432,7 +432,10 @@ non-nil に設定されているとインストールに失敗するので一時
 ;; Cheat Sheet
 ;; https://docs.emmet.io/cheat-sheet/
 (use-package emmet-mode
-  :after (css-mode sgml-mode web-mode))
+  :after (css-mode sgml-mode web-mode)
+  :config
+  (custom-set-variables
+   '(emmet-indentation 2)))
 
 (use-package expand-region
   :bind (:map mode-specific-map
