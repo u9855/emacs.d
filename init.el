@@ -310,7 +310,12 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (use-package company-web-html
     :ensure company-web
-    :after web-mode)
+    :after web-mode
+    :config
+    (add-hook 'web-mode-hook
+              (lambda ()
+                (add-to-list (make-local-variable 'company-backends)
+                             'company-web-html))))
 
   (bind-keys :map company-mode-map
              ("C-M-i" . company-complete)
