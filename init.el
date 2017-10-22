@@ -630,6 +630,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package isearch-dabbrev
   :bind (:map isearch-mode-map ("M-/" . isearch-dabbrev-expand)))
 
+(use-package js2-mode)
+
 (use-package log-edit
   :defer t
   :config (custom-set-variables
