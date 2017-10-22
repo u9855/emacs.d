@@ -634,7 +634,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :mode ("\\.js\\'" . js2-mode)
   :config
   (custom-set-variables
-   '(js-indent-level 2)))
+   '(js-indent-level 2)
+   '(js-switch-indent-offset 2)))
 
 (use-package log-edit
   :defer t
