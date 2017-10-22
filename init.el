@@ -631,7 +631,10 @@ non-nil に設定されているとインストールに失敗するので一時
   :bind (:map isearch-mode-map ("M-/" . isearch-dabbrev-expand)))
 
 (use-package js2-mode
-  :mode ("\\.js\\'" . js2-mode))
+  :mode ("\\.js\\'" . js2-mode)
+  :config
+  (custom-set-variables
+   '(js-indent-level 2)))
 
 (use-package log-edit
   :defer t
