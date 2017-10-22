@@ -635,7 +635,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(js-indent-level 2)
-   '(js-switch-indent-offset 2)))
+   '(js-switch-indent-offset 2)
+   '(js2-idle-timer-delay 0.5)))
 
 (use-package log-edit
   :defer t
