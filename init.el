@@ -876,7 +876,8 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package tern
   :if (executable-find "tern")
   :defer t
-  :init (add-hook 'js-mode-hook 'tern-mode))
+  :init (add-hook 'js-mode-hook 'tern-mode)
+  :config (custom-set-variables '(tern-command '("tern" "--no-port-file"))))
 
 (use-package web-mode
   :mode ("\\.[sx]?html?\\'" . web-mode)
