@@ -441,16 +441,14 @@ non-nil に設定されているとインストールに失敗するので一時
 ;; Cheat Sheet
 ;; https://docs.emmet.io/cheat-sheet/
 (use-package emmet-mode
-  :after (:or css-mode html-mode web-mode)
-  :config
-  (custom-set-variables
-   '(emmet-indentation 2)
-   '(emmet-self-closing-tag-style "")
-   '(emmet-insert-flash-time 0.01)
-   '(emmet-move-cursor-between-quotes t))
-
-  (--each '(css-mode-hook html-mode-hook web-mode-hook)
-    (add-hook it 'emmet-mode)))
+  :defer t
+  :init (--each '(css-mode-hook html-mode-hook web-mode-hook)
+          (add-hook it 'emmet-mode))
+  :config (custom-set-variables
+           '(emmet-indentation 2)
+           '(emmet-self-closing-tag-style "")
+           '(emmet-insert-flash-time 0.01)
+           '(emmet-move-cursor-between-quotes t)))
 
 (use-package expand-region
   :bind (:map mode-specific-map
