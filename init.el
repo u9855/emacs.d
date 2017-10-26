@@ -311,7 +311,12 @@ non-nil に設定されているとインストールに失敗するので一時
   (use-package company-tern
     :after tern
     :config
-    (custom-set-variables '(company-tern-property-marker nil)))
+    (custom-set-variables '(company-tern-property-marker nil))
+
+    (add-hook 'tern-mode-hook
+              (lambda ()
+                (add-to-list (make-local-variable 'company-backends)
+                             'company-tern))))
 
   (use-package company-web-html
     :ensure company-web
