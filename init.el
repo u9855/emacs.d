@@ -308,6 +308,9 @@ non-nil に設定されているとインストールに失敗するので一時
      '(company-statistics-auto-restore nil)
      '(company-statistics-mode t)))
 
+  (use-package company-tern
+    :after tern)
+
   (use-package company-web-html
     :ensure company-web
     :after web-mode
