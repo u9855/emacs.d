@@ -309,7 +309,9 @@ non-nil に設定されているとインストールに失敗するので一時
      '(company-statistics-mode t)))
 
   (use-package company-tern
-    :after tern)
+    :after tern
+    :config
+    (custom-set-variables '(company-tern-property-marker nil)))
 
   (use-package company-web-html
     :ensure company-web
