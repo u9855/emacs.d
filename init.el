@@ -291,6 +291,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(bookmark-save-flag 1)
    '(bookmark-default-file (expand-file-name "~/.cache/emacs/bookmarks"))))
 
+(use-package browse-at-remote
+  :defer t)
+
 (use-package company
   :diminish company-mode
   :config
