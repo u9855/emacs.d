@@ -89,7 +89,10 @@
  '(eol-mnemonic-mac "[mac]")
  '(eol-mnemonic-unix "[unix]")
  '(word-combining-categories
-   (seq-difference word-combining-categories '((?C . ?H) (?C . ?K))))
+   (let (categories)
+     (dolist (category word-combining-categories categories)
+       (unless (member category '((?C . ?H) (?C . ?K)))
+         (push category categories)))))
  '(word-separating-categories
      (dolist (category
               '((?H . ?k) (?K . ?H) (?K . ?k) (?k . ?H) (?k . ?K))
