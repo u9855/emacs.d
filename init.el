@@ -909,7 +909,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(web-mode-display-table nil))
 
   (custom-set-faces
-   '(web-mode-whitespace-face ((t (:background "#eee8d5"))))))
+   '(web-mode-whitespace-face ((t (:background "#eee8d5")))))
+
+  (bind-key "C-c C-v" 'browse-url-of-buffer web-mode-map))
 
 (use-package wgrep
   :after grep
