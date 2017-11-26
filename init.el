@@ -754,8 +754,7 @@ non-nil に設定されているとインストールに失敗するので一時
       (kill-buffer))
     (switch-to-buffer "*scratch*"))
 
-  (bind-keys :map perspeen-command-map
-             ("C-z" . perspeen-goto-last-ws)))
+  (bind-key "C-z" 'perspeen-goto-last-ws perspeen-command-map))
 
 (use-package recentf
   :config
