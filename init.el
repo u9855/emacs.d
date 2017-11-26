@@ -292,7 +292,7 @@ non-nil に設定されているとインストールに失敗するので一時
    '(bookmark-default-file (expand-file-name "~/.cache/emacs/bookmarks"))))
 
 (use-package browse-at-remote
-  :defer t)
+  :bind (:map vc-prefix-map ("C-v" . browse-at-remote)))
 
 (use-package company
   :diminish company-mode
