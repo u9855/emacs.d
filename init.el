@@ -756,6 +756,9 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (bind-key "C-z" 'perspeen-goto-last-ws perspeen-command-map))
 
+(use-package python
+  :defer t)
+
 (use-package recentf
   :config
   (custom-set-variables
