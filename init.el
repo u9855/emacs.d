@@ -897,6 +897,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :init (add-hook 'js-mode-hook 'tern-mode)
   :config (custom-set-variables '(tern-command '("tern" "--no-port-file"))))
 
+(use-package virtualenvwrapper
+  :defer t)
+
 (use-package web-mode
   :mode ("\\.[sx]?html?\\'" . web-mode)
   :config
