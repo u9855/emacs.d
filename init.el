@@ -308,7 +308,11 @@ non-nil に設定されているとインストールに失敗するので一時
    '(global-company-mode t))
 
   (use-package company-jedi
-    :after python)
+    :after python
+    :config
+    (custom-set-variables
+     '(jedi:environment-root
+       (expand-file-name "~/.local/share/emacs/virtualenvs/jedi"))))
 
   (use-package company-statistics
     :config
