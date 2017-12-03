@@ -318,7 +318,9 @@ non-nil に設定されているとインストールに失敗するので一時
      '(jedi:use-shortcuts t))
 
     ;; インストール時にエラーが出るけど気にしない！
-    (unless jedi:server-command (jedi:install-server)))
+    (unless jedi:server-command (jedi:install-server))
+
+    (add-hook 'python-mode-hook 'jedi:setup))
 
   (use-package company-statistics
     :config
