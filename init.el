@@ -314,7 +314,8 @@ non-nil に設定されているとインストールに失敗するので一時
      '(jedi:environment-root
        (expand-file-name "~/.local/share/emacs/virtualenvs/jedi"))
      '(jedi:server-command (jedi:-env-server-command))
-     '(jedi:complete-on-dot t)))
+     '(jedi:complete-on-dot t)
+     '(jedi:use-shortcuts t)))
 
   (use-package company-statistics
     :config
