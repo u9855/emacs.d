@@ -307,6 +307,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(company-idle-delay 0.2)
    '(global-company-mode t))
 
+  (defun company-add-buffer-local-backend (backend)
+    (add-to-list (make-local-variable 'company-backends) backend))
+
   (use-package company-jedi
     :after python
     :config
