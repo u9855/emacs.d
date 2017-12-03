@@ -313,7 +313,8 @@ non-nil に設定されているとインストールに失敗するので一時
     (custom-set-variables
      '(jedi:environment-root
        (expand-file-name "~/.local/share/emacs/virtualenvs/jedi"))
-     '(jedi:server-command (jedi:-env-server-command))))
+     '(jedi:server-command (jedi:-env-server-command))
+     '(jedi:complete-on-dot t)))
 
   (use-package company-statistics
     :config
