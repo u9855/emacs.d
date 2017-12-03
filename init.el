@@ -307,6 +307,9 @@ non-nil に設定されているとインストールに失敗するので一時
    '(company-idle-delay 0.2)
    '(global-company-mode t))
 
+  (use-package company-jedi
+    :after python)
+
   (use-package company-statistics
     :config
     (custom-set-variables
