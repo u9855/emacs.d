@@ -320,7 +320,12 @@ non-nil に設定されているとインストールに失敗するので一時
     ;; インストール時にエラーが出るけど気にしない！
     (unless jedi:server-command (jedi:install-server))
 
-    (add-hook 'python-mode-hook 'jedi:setup))
+    (add-hook 'python-mode-hook 'jedi:setup)
+
+    (add-hook 'python-mode-hook
+              (lambda ()
+                (add-to-list (make-local-variable 'company-backends)
+                             'company-jedi))))
 
   (use-package company-statistics
     :config
