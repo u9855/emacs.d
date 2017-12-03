@@ -326,9 +326,7 @@ non-nil に設定されているとインストールに失敗するので一時
     (add-hook 'python-mode-hook 'jedi:setup)
 
     (add-hook 'python-mode-hook
-              (lambda ()
-                (add-to-list (make-local-variable 'company-backends)
-                             'company-jedi))))
+              (-partial 'company-add-buffer-local-backend 'company-jedi)))
 
   (use-package company-statistics
     :config
@@ -343,18 +341,14 @@ non-nil に設定されているとインストールに失敗するので一時
     (custom-set-variables '(company-tern-property-marker nil))
 
     (add-hook 'tern-mode-hook
-              (lambda ()
-                (add-to-list (make-local-variable 'company-backends)
-                             'company-tern))))
+              (-partial 'company-add-buffer-local-backend 'company-tern)))
 
   (use-package company-web-html
     :ensure company-web
     :after web-mode
     :config
     (add-hook 'web-mode-hook
-              (lambda ()
-                (add-to-list (make-local-variable 'company-backends)
-                             'company-web-html))))
+              (-partial 'company-add-buffer-local-backend 'company-web-html)))
 
   (bind-keys :map company-mode-map
              ("C-M-i" . company-complete)
