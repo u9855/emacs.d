@@ -315,7 +315,10 @@ non-nil に設定されているとインストールに失敗するので一時
        (expand-file-name "~/.local/share/emacs/virtualenvs/jedi"))
      '(jedi:server-command (jedi:-env-server-command))
      '(jedi:complete-on-dot t)
-     '(jedi:use-shortcuts t)))
+     '(jedi:use-shortcuts t))
+
+    ;; インストール時にエラーが出るけど気にしない！
+    (unless jedi:server-command (jedi:install-server)))
 
   (use-package company-statistics
     :config
