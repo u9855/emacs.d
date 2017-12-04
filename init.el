@@ -513,7 +513,10 @@ non-nil に設定されているとインストールに失敗するので一時
    '(find-ls-subdir-switches dired-listing-switches)))
 
 (use-package flycheck
-  :init (custom-set-variables '(flycheck-keymap-prefix (kbd "C-c `"))))
+  :init (custom-set-variables '(flycheck-keymap-prefix (kbd "C-c `")))
+  :config
+  (custom-set-variables
+   '(flycheck-check-syntax-automatically '(save mode-enabled))))
 
 (use-package goto-chg
   :bind (:map goto-map
