@@ -517,7 +517,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :config
   (custom-set-variables
    '(flycheck-check-syntax-automatically '(save mode-enabled))
-   '(flycheck-global-modes '(not emacs-lisp-mode))))
+   '(flycheck-global-modes '(not emacs-lisp-mode))
+   '(flycheck-flake8-maximum-complexity 10)))
 
 (use-package goto-chg
   :bind (:map goto-map
