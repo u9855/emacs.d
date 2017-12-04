@@ -512,6 +512,8 @@ non-nil に設定されているとインストールに失敗するので一時
    '(find-ls-option '("-exec ls -Fdhlv {} +" . "-Fdhlv"))
    '(find-ls-subdir-switches dired-listing-switches)))
 
+(use-package flycheck)
+
 (use-package goto-chg
   :bind (:map goto-map
          (";" . goto-last-change)
