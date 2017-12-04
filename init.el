@@ -516,7 +516,8 @@ non-nil に設定されているとインストールに失敗するので一時
   :init (custom-set-variables '(flycheck-keymap-prefix (kbd "C-c `")))
   :config
   (custom-set-variables
-   '(flycheck-check-syntax-automatically '(save mode-enabled))))
+   '(flycheck-check-syntax-automatically '(save mode-enabled))
+   '(flycheck-global-modes '(not emacs-lisp-mode))))
 
 (use-package goto-chg
   :bind (:map goto-map
