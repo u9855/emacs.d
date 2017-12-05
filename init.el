@@ -627,6 +627,9 @@ non-nil に設定されているとインストールに失敗するので一時
                 :map helm-css-scss-map
                 ("M-i" . helm-css-scss-multi-from-helm-css-scss)))
 
+   (use-package helm-flycheck
+     :after flycheck)
+
    (bind-keys :map global-map
               ([remap bookmark-jump]            . helm-filtered-bookmarks)
               ([remap switch-to-buffer]         . helm-buffers-list)
