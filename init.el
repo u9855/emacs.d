@@ -424,10 +424,8 @@ non-nil に設定されているとインストールに失敗するので一時
      '(dired-bind-info nil)))
 
   (use-package dired-hide-dotfiles
-    :config
-    (add-hook 'dired-mode-hook 'dired-hide-dotfiles-mode)
-
-    (bind-key "C-." 'dired-hide-dotfiles-mode dired-mode-map)))
+    :hook (dired-mode . dired-hide-dotfiles-mode)
+    :bind (:map dired-mode-map ("C-." . dired-hide-dotfiles-mode))))
 
 (use-package easy-kill
   :bind ([remap kill-ring-save] . easy-kill)
@@ -474,9 +472,7 @@ non-nil に設定されているとインストールに失敗するので一時
 ;; Cheat Sheet
 ;; https://docs.emmet.io/cheat-sheet/
 (use-package emmet-mode
-  :defer t
-  :init (--each '(css-mode-hook html-mode-hook web-mode-hook)
-          (add-hook it 'emmet-mode))
+  :hook ((css-mode html-mode web-mode) . emmet-mode)
   :config (custom-set-variables
            '(emmet-indentation 2)
            '(emmet-self-closing-tag-style "")
@@ -655,6 +651,7 @@ non-nil に設定されているとインストールに失敗するので一時
               ("TAB" . helm-lisp-completion-at-point)))
 
 (use-package ibuffer
+  :hook (ibuffer-mode . ibuffer-auto-mode)
   :bind ([remap list-buffers] . ibuffer)
   :config
   (custom-set-variables
@@ -670,9 +667,7 @@ non-nil に設定されているとインストールに失敗するので一時
                "^\\*epc" "^\\*helm" "^\\*magit[^:]+:" "^\\*sdic\\*$"
                "^\\*vc\\(-.+\\)*\\*$" "^\\*xref\\*$")
              ibuffer-maybe-show-predicates))
-   '(ibuffer-save-with-custom nil))
-
-  (add-hook 'ibuffer-mode-hook 'ibuffer-auto-mode))
+   '(ibuffer-save-with-custom nil)))
 
 (use-package imenu
   :bind (:map search-map ("i" . imenu))
@@ -932,8 +927,7 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package tern
   :if (executable-find "tern")
-  :defer t
-  :init (add-hook 'js-mode-hook 'tern-mode)
+  :hook (js-mode . tern-mode)
   :config (custom-set-variables '(tern-command '("tern" "--no-port-file"))))
 
 (use-package virtualenvwrapper
