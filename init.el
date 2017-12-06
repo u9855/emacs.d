@@ -681,7 +681,9 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(js-indent-level 2)
    '(js-switch-indent-offset 2)
-   '(js2-idle-timer-delay 0.5))
+   '(js2-idle-timer-delay 0.5)
+   '(js2-include-jslint-globals nil)
+   '(js2-include-jslint-declaration-externs nil))
 
   (add-to-list 'js2-mode-hook 'js2-imenu-extras-mode))
 
