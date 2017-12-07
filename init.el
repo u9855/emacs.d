@@ -934,7 +934,13 @@ non-nil に設定されているとインストールに失敗するので一時
 (use-package tern
   :if (executable-find "node")
   :hook (js-mode . tern-mode)
-  :config (custom-set-variables '(tern-command '("tern" "--no-port-file"))))
+  :config
+  (custom-set-variables '(tern-command '("tern" "--no-port-file")))
+
+  (define-advice tern-mode (:around (fn &optional arg) executable-p)
+    "Call `tern-mode' only when tern is executable."
+    (if (executable-find "tern")
+        (funcall fn arg))))
 
 (use-package virtualenvwrapper
   :defer t)
