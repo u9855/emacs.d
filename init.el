@@ -932,7 +932,7 @@ non-nil に設定されているとインストールに失敗するので一時
      '("a" "s" "d" "f" "j" "k" "l" "q" "w" "e" "r" "u" "i" "o" "p"))))
 
 (use-package tern
-  :if (executable-find "tern")
+  :if (executable-find "node")
   :hook (js-mode . tern-mode)
   :config (custom-set-variables '(tern-command '("tern" "--no-port-file"))))
 
