@@ -180,8 +180,9 @@ non-nil に設定されているとインストールに失敗するので一時
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-(require 'use-package)
-(custom-set-variables '(use-package-always-ensure t))
+(custom-set-variables
+ '(use-package-enable-imenu-support t)
+ '(use-package-always-ensure t))
 
 (use-package dash
   :config
