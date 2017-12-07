@@ -195,7 +195,9 @@ non-nil に設定されているとインストールに失敗するので一時
   :config (region-bindings-mode-enable))
 
 (use-package add-node-modules-path
-  :if (executable-find "node"))
+  :if (executable-find "node")
+  :after js
+  :config (add-hook 'js-mode-hook 'add-node-modules-path))
 
 (use-package ag
   :if (executable-find "ag")
