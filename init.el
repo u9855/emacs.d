@@ -473,7 +473,7 @@ non-nil に設定されているとインストールに失敗するので一時
 ;; Cheat Sheet
 ;; https://docs.emmet.io/cheat-sheet/
 (use-package emmet-mode
-  :hook ((css-mode html-mode web-mode) . emmet-mode)
+  :hook (css-mode html-mode web-mode)
   :config (custom-set-variables
            '(emmet-indentation 2)
            '(emmet-self-closing-tag-style "")
