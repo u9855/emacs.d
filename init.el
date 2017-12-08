@@ -949,9 +949,6 @@ non-nil に設定されているとインストールに失敗するので一時
     (if (executable-find "tern")
         (funcall fn arg))))
 
-(use-package virtualenvwrapper
-  :defer t)
-
 (use-package web-mode
   :mode ("\\.[sx]?html?\\'" . web-mode)
   :config
