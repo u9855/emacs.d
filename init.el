@@ -262,7 +262,11 @@ non-nil に設定されているとインストールに失敗するので一時
   (auto-save-buffers-enhanced t))
 
 (use-package auto-virtualenvwrapper
-  :config (custom-set-variables '(auto-virtualenvwrapper-dir venv-location)))
+  :after python
+  :config
+  (custom-set-variables '(auto-virtualenvwrapper-dir venv-location))
+
+  (add-hook 'python-mode-hook 'auto-virtualenvwrapper-activate))
 
 (use-package avy
   :bind (:map goto-map
