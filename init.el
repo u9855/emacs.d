@@ -261,6 +261,8 @@ non-nil に設定されているとインストールに失敗するので一時
 
   (auto-save-buffers-enhanced t))
 
+(use-package auto-virtualenvwrapper)
+
 (use-package avy
   :bind (:map goto-map
          (":" . avy-goto-char)
