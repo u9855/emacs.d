@@ -805,7 +805,10 @@ non-nil に設定されているとインストールに失敗するので一時
 
 (use-package python
   :defer t
-  :config (custom-set-variables '(python-indent-guess-indent-offset nil)))
+  :config
+  (custom-set-variables
+   '(python-indent-guess-indent-offset nil)
+   '(python-shell-completion-native-enable nil)))
 
 (use-package recentf
   :config
