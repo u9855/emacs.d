@@ -535,6 +535,10 @@ non-nil に設定されているとインストールに失敗するので一時
        '(js2-mode-show-strict-warnings nil)
        '(js2-include-browser-externs nil)))
 
+  ;; UnicodeDecodeError の対処。
+  (add-to-list 'process-coding-system-alist
+              '("flake8" undecided-dos . utf-8-dos))
+
   (add-hook 'after-init-hook 'global-flycheck-mode))
 
 (use-package goto-chg
