@@ -527,13 +527,10 @@ non-nil に設定されているとインストールに失敗するので一時
   (custom-set-variables
    '(flycheck-check-syntax-automatically '(save mode-enabled))
    '(flycheck-global-modes '(not emacs-lisp-mode lisp-interaction-mode))
-   '(flycheck-flake8-maximum-complexity 10))
-
-  (if (executable-find "node")
-      (custom-set-variables
-       '(js2-mode-show-parse-errors nil)
-       '(js2-mode-show-strict-warnings nil)
-       '(js2-include-browser-externs nil)))
+   '(flycheck-flake8-maximum-complexity 10)
+   '(js2-mode-show-parse-errors nil)
+   '(js2-mode-show-strict-warnings nil)
+   '(js2-include-browser-externs nil))
 
   ;; UnicodeDecodeError の対処。
   (add-to-list 'process-coding-system-alist
